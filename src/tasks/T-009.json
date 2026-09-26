@@ -4,10 +4,9 @@
   "verifier": "jarvis",
   "title": "Baseline evaluation",
   "gate": "G1",
-  "status": "todo",
+  "status": "in-progress",
   "blocked_on": "",
-  "receipt_ref": "",
-  "summary": "Run the approved baseline evaluation after orientation is accepted.",
-  "updated": "2026-09-26T04:04:14Z"
+  "receipt_ref": "baseline-evaluation-preliminary",
+  "summary": "The 25-question preliminary baseline is complete; human scoring and independent verification remain.",
+  "updated": "2026-09-26T07:21:36Z"
 }
-

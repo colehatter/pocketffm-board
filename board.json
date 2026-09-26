@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T07:11:50Z",
+  "updated": "2026-09-26T07:21:36Z",
   "gates": [
     {
       "id": "G1",
@@ -128,12 +128,12 @@
       "owner": "iron-man",
       "title": "Baseline evaluation",
       "gate": "G1",
-      "status": "todo",
+      "status": "in-progress",
       "blocked_on": "",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Run the approved baseline evaluation after orientation is accepted.",
-      "updated": "2026-09-26T04:04:14Z"
+      "receipt_ref": "baseline-evaluation-preliminary",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/baseline-evaluation-preliminary.html",
+      "summary": "The 25-question preliminary baseline is complete; human scoring and independent verification remain.",
+      "updated": "2026-09-26T07:21:36Z"
     },
     {
       "id": "T-010",
@@ -200,12 +200,12 @@
       "owner": "iron-man",
       "title": "Live backup-artifact audit",
       "gate": "G1",
-      "status": "blocked",
-      "blocked_on": "Eight historical backup artifacts remain outside active code paths and require separately approved production cleanup.",
+      "status": "done",
+      "blocked_on": "",
       "receipt_ref": "live-backup-artifact-audit",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/live-backup-artifact-audit.html",
-      "summary": "The live application tree audit found remaining historical backup artifacts.",
-      "updated": "2026-09-26T06:28:31Z"
+      "summary": "All eight approved historical backup artifacts were checksum-matched to the offline backup and removed.",
+      "updated": "2026-09-26T07:21:35Z"
     },
     {
       "id": "T-016",
@@ -360,6 +360,16 @@
       "ts": "2026-09-26T07:11:50Z",
       "who": "iron-man",
       "what": "Board sync check added and receipt URLs made absolute"
+    },
+    {
+      "ts": "2026-09-26T07:21:35Z",
+      "who": "iron-man",
+      "what": "T-015 done: eight approved historical backup artifacts removed"
+    },
+    {
+      "ts": "2026-09-26T07:21:36Z",
+      "who": "iron-man",
+      "what": "T-009 in-progress: preliminary 25-question baseline captured"
     }
   ]
 }
