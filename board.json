@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T07:37:09Z",
+  "updated": "2026-09-26T07:47:28Z",
   "gates": [
     {
       "id": "G1",
@@ -290,15 +290,22 @@
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/sanitized-staging-handoff.html",
       "summary": "The full sanitized artifact and access procedure are ready; delivery awaits builder-host availability.",
       "updated": "2026-09-26T07:37:09Z"
+    },
+    {
+      "id": "T-023",
+      "owner": "iron-man",
+      "title": "Pocket FFM CSP restoration",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "pocket-ffm-csp-hotfix",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/pocket-ffm-csp-hotfix.html",
+      "summary": "The existing Pocket FFM interface and browser behavior were restored without changing retrieval or application data.",
+      "updated": "2026-09-26T07:47:28Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-004 done: access boundary summary ready"
-    },
     {
       "ts": "2026-09-26T04:04:14Z",
       "who": "iron-man",
@@ -443,6 +450,11 @@
       "ts": "2026-09-26T07:37:09Z",
       "who": "iron-man",
       "what": "G1 ready: all gate tasks are done or explicitly blocked"
+    },
+    {
+      "ts": "2026-09-26T07:47:28Z",
+      "who": "iron-man",
+      "what": "T-023 done: Pocket FFM browser interface restored after CSP conflict"
     }
   ]
 }

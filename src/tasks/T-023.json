@@ -1,0 +1,12 @@
+{
+  "id": "T-023",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Pocket FFM CSP restoration",
+  "gate": "G1",
+  "status": "done",
+  "blocked_on": "",
+  "receipt_ref": "pocket-ffm-csp-hotfix",
+  "summary": "The existing Pocket FFM interface and browser behavior were restored without changing retrieval or application data.",
+  "updated": "2026-09-26T07:47:28Z"
+}
