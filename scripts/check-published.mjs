@@ -1,5 +1,5 @@
 const siteUrl = process.env.POCKETFFM_BOARD_SITE_URL || 'https://pocketffm-board.vercel.app/board.json';
-const mainUrl = process.env.POCKETFFM_BOARD_MAIN_URL || 'https://raw.githubusercontent.com/colehatter/pocketffm-board/main/board.json';
+const mainUrl = process.env.POCKETFFM_BOARD_MAIN_URL || 'https://api.github.com/repos/colehatter/pocketffm-board/contents/board.json?ref=main';
 
 function cacheBusted(url) {
   const parsed = new URL(url);
@@ -8,7 +8,12 @@ function cacheBusted(url) {
 }
 
 async function fetchBoard(url, label) {
-  const response = await fetch(cacheBusted(url), { headers: { 'Cache-Control': 'no-cache' } });
+  const headers = { 'Cache-Control': 'no-cache' };
+  if (url.includes('api.github.com/')) {
+    headers.Accept = 'application/vnd.github.raw+json';
+    headers['User-Agent'] = 'pocketffm-board-sync-check';
+  }
+  const response = await fetch(cacheBusted(url), { headers });
   if (!response.ok) throw new Error(`${label} returned HTTP ${response.status}`);
   const board = await response.json();
   const updatedMs = Date.parse(board.updated);
