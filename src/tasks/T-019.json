@@ -1,0 +1,12 @@
+{
+  "id": "T-019",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Canonical retrieval design",
+  "gate": "G2",
+  "status": "done",
+  "blocked_on": "",
+  "receipt_ref": "g2-retrieval-design",
+  "summary": "A production-safe hybrid retrieval design is complete using the current canonical corpus and measured rollout gates.",
+  "updated": "2026-09-26T07:31:23Z"
+}
