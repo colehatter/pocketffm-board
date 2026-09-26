@@ -39,3 +39,7 @@
 {"ts":"2026-09-26T20:47:23Z","who":"iron-man","what":"T-024 done: hardened isolated staging host provisioned and verified"}
 {"ts":"2026-09-26T20:47:24Z","who":"iron-man","what":"T-025 blocked: indexes, builder reports, reboot proof, and sudo restriction remain"}
 {"ts":"2026-09-26T20:47:25Z","who":"iron-man","what":"T-027 blocked: separate builder credentials and orientation reports remain"}
+{"ts":"2026-09-26T21:48:44Z","who":"iron-man","what":"Builder runtime switched from Anthropic API billing to isolated Codex CLI OAuth"}
+{"ts":"2026-09-26T21:48:45Z","who":"iron-man","what":"T-010 blocked: Codex CLI installed; separate ChatGPT device authorization remains"}
+{"ts":"2026-09-26T21:48:46Z","who":"iron-man","what":"T-011 blocked: Codex CLI installed; separate ChatGPT device authorization remains"}
+{"ts":"2026-09-26T21:48:47Z","who":"iron-man","what":"T-027 blocked: separate ChatGPT device authorizations and orientation reports remain"}
