@@ -1,0 +1,1 @@
+{"id":"retired-code-documentation-scan","title":"Retired code documentation scan","result":"pass","summary":"The retired access code is absent from current production documentation.","evidence":["A current-tree recursive scan returned zero matches.","The credential remains omitted from this public receipt."]}

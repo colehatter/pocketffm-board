@@ -1,0 +1,1 @@
+{"id":"T-013","owner":"iron-man","verifier":"jarvis","title":"Retired access-code rejection","gate":"G1","status":"done","blocked_on":"","receipt_ref":"retired-access-code-rejection","summary":"Requests with no access code and with the retired code are both rejected.","updated":"2026-09-26T06:28:31Z"}

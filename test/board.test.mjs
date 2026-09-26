@@ -26,11 +26,12 @@ test('generated artifacts are static and match the public schema', () => {
   execFileSync(process.execPath, ['scripts/generate.mjs'], { cwd: root });
   const board = JSON.parse(fs.readFileSync(path.join(root, 'board.json'), 'utf8'));
   assert.deepEqual(Object.keys(board), ['updated', 'gates', 'tasks', 'questions', 'log']);
-  assert.deepEqual(Object.keys(board.tasks[0]), ['id', 'owner', 'title', 'gate', 'status', 'blocked_on', 'receipt_ref', 'summary', 'updated']);
+  assert.deepEqual(Object.keys(board.tasks[0]), ['id', 'owner', 'title', 'gate', 'status', 'blocked_on', 'receipt_ref', 'receipt_url', 'summary', 'updated']);
   assert.deepEqual(board, publicBoard(loadSources()));
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.doesNotMatch(html, /<script\b/i);
   assert.match(html, /Attention required/);
   assert.match(html, /Latest activity/);
+  assert.match(html, /href="\/receipts\/closeout-backup-summary\.html"/);
+  assert.equal(fs.existsSync(path.join(root, 'receipts', 'closeout-backup-summary.html')), true);
 });
-

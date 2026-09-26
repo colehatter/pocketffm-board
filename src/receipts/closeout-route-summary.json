@@ -1,0 +1,1 @@
+{"id":"closeout-route-summary","title":"Route availability closeout","result":"pass","summary":"The public application routes and health endpoint returned successful responses.","evidence":["Both Pocket FFM public routes returned HTTP 200.","The application health endpoint returned HTTP 200."]}

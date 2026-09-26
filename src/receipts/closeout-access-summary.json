@@ -1,0 +1,1 @@
+{"id":"closeout-access-summary","title":"Access boundary closeout","result":"pass","summary":"Unauthenticated protected requests are rejected while approved access succeeds.","evidence":["Missing access-code requests returned HTTP 403.","Approved protected requests returned HTTP 200."]}

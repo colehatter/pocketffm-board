@@ -26,9 +26,17 @@ export function validateSources(sources) {
   unique(sources.gates, 'gates');
   unique(sources.tasks, 'tasks');
   unique(sources.questions, 'questions');
+  unique(sources.receipts, 'receipts');
 
   const gateIds = new Set(sources.gates.map(gate => gate.id));
   const approvals = new Map(sources.approvals.map(approval => [approval.gate, approval]));
+  const receiptRefs = new Set(sources.receipts.map(receipt => receipt.id));
+
+  for (const receipt of sources.receipts) {
+    assert(/^[a-z0-9-]+$/.test(receipt.id), `${receipt.id} has an invalid receipt id`);
+    assert(receipt.title && receipt.result && receipt.summary, `${receipt.id} is incomplete`);
+    assert(Array.isArray(receipt.evidence) && receipt.evidence.length, `${receipt.id} requires evidence`);
+  }
 
   for (const gate of sources.gates) {
     assert(/^G\d+$/.test(gate.id), `${gate.id} has an invalid gate id`);
@@ -53,6 +61,7 @@ export function validateSources(sources) {
     assert(task.title && task.summary && ISO.test(task.updated), `${task.id} is missing required content`);
     assert(task.status !== 'blocked' || task.blocked_on, `${task.id} is blocked without blocked_on`);
     assert(!['done', 'verified'].includes(task.status) || task.receipt_ref, `${task.id} ${task.status} requires receipt_ref`);
+    assert(!task.receipt_ref || receiptRefs.has(task.receipt_ref), `${task.id} references missing receipt ${task.receipt_ref}`);
     if (task.owner === 'iron-man') assert(task.verifier === 'jarvis', `${task.id} must be verified by jarvis`);
     if (task.owner === 'jarvis' || task.owner === 'wonder-woman') assert(task.verifier === 'iron-man', `${task.id} must be verified by iron-man`);
     const expectedLog = `${task.id} ${task.status}:`;
@@ -88,4 +97,3 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     process.exit(1);
   }
 }
-

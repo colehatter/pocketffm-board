@@ -1,0 +1,1 @@
+{"id":"T-012","owner":"iron-man","verifier":"jarvis","title":"Backup archive checksum","gate":"G1","status":"done","blocked_on":"","receipt_ref":"backup-archive-checksum","summary":"The private production application archive and its restored copy have matching SHA-256 values.","updated":"2026-09-26T06:28:31Z"}

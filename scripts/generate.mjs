@@ -13,7 +13,7 @@ const openQuestions = board.questions.filter(question => question.status === 'op
 const taskGroups = board.gates.map(gate => {
   const tasks = board.tasks.filter(task => task.gate === gate.id);
   const owners = [...new Set(tasks.map(task => task.owner))];
-  return `<section class="gate"><header><div><span class="eyebrow">${escapeHtml(gate.id)}</span><h2>${escapeHtml(gate.name)}</h2></div><div class="gate-meta"><span class="status ${escapeHtml(gate.status)}">${escapeHtml(label(gate.status))}</span><time>${escapeHtml(gate.due)}</time></div></header>${owners.map(owner => `<div class="owner"><h3>${escapeHtml(label(owner))}</h3>${tasks.filter(task => task.owner === owner).map(task => `<article class="task"><div class="task-line"><strong>${escapeHtml(task.id)} · ${escapeHtml(task.title)}</strong><span class="status ${escapeHtml(task.status)}">${escapeHtml(label(task.status))}</span></div><p>${escapeHtml(task.summary)}</p>${task.receipt_ref ? `<small>Receipt: ${escapeHtml(task.receipt_ref)}</small>` : ''}</article>`).join('')}</div>`).join('')}</section>`;
+  return `<section class="gate"><header><div><span class="eyebrow">${escapeHtml(gate.id)}</span><h2>${escapeHtml(gate.name)}</h2></div><div class="gate-meta"><span class="status ${escapeHtml(gate.status)}">${escapeHtml(label(gate.status))}</span><time>${escapeHtml(gate.due)}</time></div></header>${owners.map(owner => `<div class="owner"><h3>${escapeHtml(label(owner))}</h3>${tasks.filter(task => task.owner === owner).map(task => `<article class="task"><div class="task-line"><strong>${escapeHtml(task.id)} · ${escapeHtml(task.title)}</strong><span class="status ${escapeHtml(task.status)}">${escapeHtml(label(task.status))}</span></div><p>${escapeHtml(task.summary)}</p>${task.receipt_ref ? `<small>Receipt: <a href="${escapeHtml(task.receipt_url)}">${escapeHtml(task.receipt_ref)}</a></small>` : ''}</article>`).join('')}</div>`).join('')}</section>`;
 }).join('');
 
 const alerts = `<section class="alerts"><h2>Attention required</h2>${blocked.length === 0 && openQuestions.length === 0 ? '<p class="clear">No blocked tasks or open questions.</p>' : ''}${blocked.map(task => `<article><strong>${escapeHtml(task.id)} blocked</strong><p>${escapeHtml(task.blocked_on)}</p></article>`).join('')}${openQuestions.map(question => `<article><strong>${escapeHtml(question.id)} for ${escapeHtml(label(question.for))}</strong><p>${escapeHtml(question.text)}</p></article>`).join('')}</section>`;
@@ -30,5 +30,14 @@ const dist = path.join(root, 'dist');
 fs.mkdirSync(dist, { recursive: true });
 fs.writeFileSync(path.join(dist, 'board.json'), json);
 fs.writeFileSync(path.join(dist, 'index.html'), html);
+const receiptDirectory = path.join(root, 'receipts');
+const distReceiptDirectory = path.join(dist, 'receipts');
+fs.mkdirSync(receiptDirectory, { recursive: true });
+fs.mkdirSync(distReceiptDirectory, { recursive: true });
+for (const receipt of loadSources().receipts) {
+  const evidence = receipt.evidence.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+  const receiptHtml = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(receipt.title)}</title><style>body{max-width:820px;margin:40px auto;padding:0 20px;background:#0b0e12;color:#f5f7fb;font:16px/1.6 system-ui,sans-serif}a{color:#ffb21a}.card{background:#141922;border:1px solid #29303c;border-radius:14px;padding:24px}.result{font-weight:800;text-transform:uppercase}</style></head><body><p><a href="/">Back to board</a></p><main class="card"><h1>${escapeHtml(receipt.title)}</h1><p class="result">${escapeHtml(receipt.result)}</p><p>${escapeHtml(receipt.summary)}</p><h2>Evidence</h2><ul>${evidence}</ul>${receipt.limitations ? `<h2>Limitations</h2><p>${escapeHtml(receipt.limitations)}</p>` : ''}</main></body></html>`;
+  fs.writeFileSync(path.join(receiptDirectory, `${receipt.id}.html`), receiptHtml);
+  fs.writeFileSync(path.join(distReceiptDirectory, `${receipt.id}.html`), receiptHtml);
+}
 console.log(`GENERATED: ${board.gates.length} gates, ${board.tasks.length} tasks, ${board.log.length} recent log entries`);
-

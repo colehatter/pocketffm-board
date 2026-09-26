@@ -4,10 +4,9 @@
   "verifier": "iron-man",
   "title": "Wonder Woman orientation report",
   "gate": "G1",
-  "status": "todo",
-  "blocked_on": "",
+  "status": "blocked",
+  "blocked_on": "Wonder Woman host is currently unreachable from the coordination environment.",
   "receipt_ref": "",
   "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
-  "updated": "2026-09-26T04:04:14Z"
+  "updated": "2026-09-26T06:28:31Z"
 }
-

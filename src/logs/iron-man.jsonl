@@ -8,4 +8,11 @@
 {"ts":"2026-09-26T04:04:14Z","who":"iron-man","what":"T-008 todo: staging environment queued"}
 {"ts":"2026-09-26T04:04:14Z","who":"iron-man","what":"T-009 todo: baseline evaluation queued"}
 {"ts":"2026-09-26T04:04:14Z","who":"iron-man","what":"Board initialized under approved governance"}
-
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-008 done: isolated staging environment passed local verification"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-012 done: private archive checksum matched its restored copy"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-013 done: missing and retired access codes rejected"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-014 blocked: principal-controlled browser code entry required"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-015 blocked: historical production backup artifacts remain"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-016 done: retired code absent from current documentation"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-017 done: security regression coverage mapped"}
+{"ts":"2026-09-26T06:28:31Z","who":"iron-man","what":"T-018 done: routing restoration and rollback summarized"}

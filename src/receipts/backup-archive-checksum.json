@@ -1,0 +1,1 @@
+{"id":"backup-archive-checksum","title":"Production archive checksum","result":"pass","summary":"The private application archive and restored archive copy match exactly.","evidence":["SHA-256: 6a42f2ec2fb9a701b567ae8177e52cad1bcf3c9d0667c7adfb49bd9a63c9e24e","Both file manifests contained 1,141 matching application files."]}

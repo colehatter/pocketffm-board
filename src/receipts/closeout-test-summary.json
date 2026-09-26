@@ -1,0 +1,1 @@
+{"id":"closeout-test-summary","title":"Automated test closeout","result":"pass","summary":"The security-patched application passed its complete test suite.","evidence":["Local tests passed.","Production-side tests passed before final smoke verification."]}

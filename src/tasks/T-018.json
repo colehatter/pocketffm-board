@@ -1,0 +1,1 @@
+{"id":"T-018","owner":"iron-man","verifier":"jarvis","title":"Routing restoration summary","gate":"G1","status":"done","blocked_on":"","receipt_ref":"routing-restoration-summary","summary":"The routing omission, restoration, verification, and rollback path are documented without internal identifiers.","updated":"2026-09-26T06:28:31Z"}

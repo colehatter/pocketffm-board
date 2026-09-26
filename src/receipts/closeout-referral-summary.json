@@ -1,0 +1,1 @@
+{"id":"closeout-referral-summary","title":"Referral privacy closeout","result":"pass","summary":"Referral search requires approved access and omits private contact fields.","evidence":["Anonymous search returned HTTP 403.","Authorized results contained neither email nor phone fields."]}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T04:04:14Z",
+  "updated": "2026-09-26T06:28:31Z",
   "gates": [
     {
       "id": "G1",
@@ -35,6 +35,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-backup-summary",
+      "receipt_url": "/receipts/closeout-backup-summary.html",
       "summary": "Sanitized backup and restore verification is ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -46,6 +47,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-test-summary",
+      "receipt_url": "/receipts/closeout-test-summary.html",
       "summary": "Sanitized automated test results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -57,6 +59,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-route-summary",
+      "receipt_url": "/receipts/closeout-route-summary.html",
       "summary": "Sanitized route availability results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -68,6 +71,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-access-summary",
+      "receipt_url": "/receipts/closeout-access-summary.html",
       "summary": "Sanitized access-boundary results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -79,6 +83,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-feedback-summary",
+      "receipt_url": "/receipts/closeout-feedback-summary.html",
       "summary": "Sanitized feedback-write results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -90,6 +95,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-referral-summary",
+      "receipt_url": "/receipts/closeout-referral-summary.html",
       "summary": "Sanitized referral privacy results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -101,6 +107,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-admin-summary",
+      "receipt_url": "/receipts/closeout-admin-summary.html",
       "summary": "Sanitized admin-boundary results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -109,11 +116,12 @@
       "owner": "iron-man",
       "title": "Staging environment",
       "gate": "G1",
-      "status": "todo",
+      "status": "done",
       "blocked_on": "",
-      "receipt_ref": "",
-      "summary": "Create an isolated staging environment after orientation is accepted.",
-      "updated": "2026-09-26T04:04:14Z"
+      "receipt_ref": "isolated-staging-environment",
+      "receipt_url": "/receipts/isolated-staging-environment.html",
+      "summary": "An isolated loopback-only staging environment is complete and locally verified.",
+      "updated": "2026-09-26T06:28:31Z"
     },
     {
       "id": "T-009",
@@ -123,6 +131,7 @@
       "status": "todo",
       "blocked_on": "",
       "receipt_ref": "",
+      "receipt_url": "",
       "summary": "Run the approved baseline evaluation after orientation is accepted.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -131,22 +140,108 @@
       "owner": "jarvis",
       "title": "Jarvis orientation report",
       "gate": "G1",
-      "status": "todo",
-      "blocked_on": "",
+      "status": "blocked",
+      "blocked_on": "Jarvis host is currently unreachable from the coordination environment.",
       "receipt_ref": "",
+      "receipt_url": "",
       "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
-      "updated": "2026-09-26T04:04:14Z"
+      "updated": "2026-09-26T06:28:31Z"
     },
     {
       "id": "T-011",
       "owner": "wonder-woman",
       "title": "Wonder Woman orientation report",
       "gate": "G1",
-      "status": "todo",
-      "blocked_on": "",
+      "status": "blocked",
+      "blocked_on": "Wonder Woman host is currently unreachable from the coordination environment.",
       "receipt_ref": "",
+      "receipt_url": "",
       "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
-      "updated": "2026-09-26T04:04:14Z"
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-012",
+      "owner": "iron-man",
+      "title": "Backup archive checksum",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "backup-archive-checksum",
+      "receipt_url": "/receipts/backup-archive-checksum.html",
+      "summary": "The private production application archive and its restored copy have matching SHA-256 values.",
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-013",
+      "owner": "iron-man",
+      "title": "Retired access-code rejection",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "retired-access-code-rejection",
+      "receipt_url": "/receipts/retired-access-code-rejection.html",
+      "summary": "Requests with no access code and with the retired code are both rejected.",
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-014",
+      "owner": "iron-man",
+      "title": "Referral sidebar browser smoke",
+      "gate": "G1",
+      "status": "blocked",
+      "blocked_on": "A tester must enter the replacement code in the browser without sharing it with another system.",
+      "receipt_ref": "referral-sidebar-browser-smoke",
+      "receipt_url": "/receipts/referral-sidebar-browser-smoke.html",
+      "summary": "The real browser sidebar smoke is awaiting a principal-controlled code entry.",
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-015",
+      "owner": "iron-man",
+      "title": "Live backup-artifact audit",
+      "gate": "G1",
+      "status": "blocked",
+      "blocked_on": "Eight historical backup artifacts remain outside active code paths and require separately approved production cleanup.",
+      "receipt_ref": "live-backup-artifact-audit",
+      "receipt_url": "/receipts/live-backup-artifact-audit.html",
+      "summary": "The live application tree audit found remaining historical backup artifacts.",
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-016",
+      "owner": "iron-man",
+      "title": "Retired code documentation scan",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "retired-code-documentation-scan",
+      "receipt_url": "/receipts/retired-code-documentation-scan.html",
+      "summary": "The retired code is absent from current production documentation.",
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-017",
+      "owner": "iron-man",
+      "title": "Security regression coverage map",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "security-regression-coverage",
+      "receipt_url": "/receipts/security-regression-coverage.html",
+      "summary": "The five-test suite and its coverage of the patched boundaries are documented.",
+      "updated": "2026-09-26T06:28:31Z"
+    },
+    {
+      "id": "T-018",
+      "owner": "iron-man",
+      "title": "Routing restoration summary",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "routing-restoration-summary",
+      "receipt_url": "/receipts/routing-restoration-summary.html",
+      "summary": "The routing omission, restoration, verification, and rollback path are documented without internal identifiers.",
+      "updated": "2026-09-26T06:28:31Z"
     }
   ],
   "questions": [],
@@ -210,6 +305,56 @@
       "ts": "2026-09-26T04:04:14Z",
       "who": "wonder-woman",
       "what": "T-011 todo: orientation report queued"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-008 done: isolated staging environment passed local verification"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-012 done: private archive checksum matched its restored copy"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-013 done: missing and retired access codes rejected"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-014 blocked: principal-controlled browser code entry required"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-015 blocked: historical production backup artifacts remain"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-016 done: retired code absent from current documentation"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-017 done: security regression coverage mapped"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "iron-man",
+      "what": "T-018 done: routing restoration and rollback summarized"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "jarvis",
+      "what": "T-010 blocked: host currently unreachable"
+    },
+    {
+      "ts": "2026-09-26T06:28:31Z",
+      "who": "wonder-woman",
+      "what": "T-011 blocked: host currently unreachable"
     }
   ]
 }

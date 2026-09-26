@@ -34,6 +34,7 @@ export function loadSources() {
     tasks: readJsonDirectory('src/tasks'),
     questions: readJsonDirectory('src/questions'),
     approvals: readJsonDirectory('src/approvals'),
+    receipts: readJsonDirectory('src/receipts'),
     log: readLogs()
   };
 }
@@ -43,7 +44,9 @@ export function publicBoard(sources) {
     updated: sources.meta.updated,
     gates: sources.gates.map(({ id, name, due, status }) => ({ id, name, due, status })),
     tasks: sources.tasks.map(({ id, owner, title, gate, status, blocked_on, receipt_ref, summary, updated }) => ({
-      id, owner, title, gate, status, blocked_on, receipt_ref, summary, updated
+      id, owner, title, gate, status, blocked_on, receipt_ref,
+      receipt_url: receipt_ref ? `/receipts/${receipt_ref}.html` : '',
+      summary, updated
     })),
     questions: sources.questions.map(({ id, from, for: recipient, text, status, answer }) => ({
       id, from, for: recipient, text, status, answer
@@ -53,4 +56,3 @@ export function publicBoard(sources) {
       .slice(-30)
   };
 }
-

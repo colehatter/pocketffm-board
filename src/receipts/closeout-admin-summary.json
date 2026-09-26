@@ -1,0 +1,1 @@
+{"id":"closeout-admin-summary","title":"Administrator boundary closeout","result":"pass","summary":"Administrator routes fail closed and reject ordinary user authentication.","evidence":["An ordinary-user admin attempt returned HTTP 403.","Configured administrator authentication returned HTTP 200."]}

@@ -1,0 +1,1 @@
+{"id":"closeout-feedback-summary","title":"Feedback write closeout","result":"pass","summary":"The feedback endpoint accepted and recorded a controlled smoke submission.","evidence":["The controlled feedback request returned HTTP 201.","Temporary smoke data was removed after verification."]}

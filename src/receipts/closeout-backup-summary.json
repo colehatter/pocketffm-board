@@ -1,0 +1,1 @@
+{"id":"closeout-backup-summary","title":"Backup and restore verification","result":"pass","summary":"The complete application snapshot and database restore were verified privately.","evidence":["1,141 application files matched the production checksum manifest.","The restored database passed integrity validation and record-count comparison."]}
