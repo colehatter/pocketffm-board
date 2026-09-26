@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T08:02:11Z",
+  "updated": "2026-09-26T20:15:16Z",
   "gates": [
     {
       "id": "G1",
@@ -356,11 +356,6 @@
   "log": [
     {
       "ts": "2026-09-26T04:04:14Z",
-      "who": "jarvis",
-      "what": "T-010 todo: orientation report queued"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
       "who": "wonder-woman",
       "what": "T-011 todo: orientation report queued"
     },
@@ -503,6 +498,11 @@
       "ts": "2026-09-26T08:02:11Z",
       "who": "iron-man",
       "what": "T-027 blocked: independent builder heartbeats await credential-isolated host access"
+    },
+    {
+      "ts": "2026-09-26T20:15:16Z",
+      "who": "iron-man",
+      "what": "G1 open: publish T-010 and T-011 staging access audit receipts and builder merge rule"
     }
   ]
 }

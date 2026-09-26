@@ -25,3 +25,17 @@
 
 Never commit secrets, credentials, access codes, member data, infrastructure addresses, internal filesystem locations, deployment identifiers, raw receipts, private failure output, or personal information. Use a sanitized `receipt_ref`, normally a board-local receipt label or source commit SHA.
 
+
+## Builder board merge rule
+
+Builder board write keys are repository-wide deploy keys, and branch protection is unavailable on the current plan. Branch scope is therefore enforced at merge time by Iron Man.
+
+- Builders push only to their own board branch: `jarvis/<task-id>` for Jarvis and `wonder-woman/<task-id>` for Wonder Woman.
+- Builders never push to `main` or to another builder's branch.
+- Iron Man merges a builder commit only if every changed file is one of:
+  - that builder's own `src/tasks/T-0xx.json` records
+  - that builder's own log (`src/logs/jarvis.jsonl` or `src/logs/wonder-woman.jsonl`)
+  - `src/meta.json`
+- Any other changed file, including another builder's task or log, generated output, receipts, gates, approvals, or scripts, blocks the merge. Iron Man returns the commit to the builder.
+- Before merging, Iron Man checks the changed-file list with `git diff --name-only main...<branch>` and confirms the branch name matches the committing builder.
+- Any push to `main` or to another builder's branch from a builder key is an incident. Iron Man reports it to Cole, and that builder's key is revoked until reviewed.
