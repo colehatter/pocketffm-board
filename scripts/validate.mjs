@@ -1,5 +1,5 @@
 import { pathToFileURL } from 'node:url';
-import { loadSources } from './lib.mjs';
+import { loadSources, publicBaseUrl } from './lib.mjs';
 
 const OWNERS = new Set(['iron-man', 'jarvis', 'wonder-woman', 'claude', 'cole']);
 const TASK_STATUSES = new Set(['todo', 'in-progress', 'done', 'verified', 'blocked']);
@@ -62,6 +62,9 @@ export function validateSources(sources) {
     assert(task.status !== 'blocked' || task.blocked_on, `${task.id} is blocked without blocked_on`);
     assert(!['done', 'verified'].includes(task.status) || task.receipt_ref, `${task.id} ${task.status} requires receipt_ref`);
     assert(!task.receipt_ref || receiptRefs.has(task.receipt_ref), `${task.id} references missing receipt ${task.receipt_ref}`);
+    if (task.receipt_ref) {
+      assert(`${publicBaseUrl}/receipts/${task.receipt_ref}.html`.startsWith('https://'), `${task.id} receipt URL must be absolute HTTPS`);
+    }
     if (task.owner === 'iron-man') assert(task.verifier === 'jarvis', `${task.id} must be verified by jarvis`);
     if (task.owner === 'jarvis' || task.owner === 'wonder-woman') assert(task.verifier === 'iron-man', `${task.id} must be verified by iron-man`);
     const expectedLog = `${task.id} ${task.status}:`;

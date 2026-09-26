@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+export const publicBaseUrl = 'https://pocketffm-board.vercel.app';
 
 export function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -45,7 +46,7 @@ export function publicBoard(sources) {
     gates: sources.gates.map(({ id, name, due, status }) => ({ id, name, due, status })),
     tasks: sources.tasks.map(({ id, owner, title, gate, status, blocked_on, receipt_ref, summary, updated }) => ({
       id, owner, title, gate, status, blocked_on, receipt_ref,
-      receipt_url: receipt_ref ? `/receipts/${receipt_ref}.html` : '',
+      receipt_url: receipt_ref ? `${publicBaseUrl}/receipts/${receipt_ref}.html` : '',
       summary, updated
     })),
     questions: sources.questions.map(({ id, from, for: recipient, text, status, answer }) => ({

@@ -8,7 +8,7 @@
     "generate": "node scripts/generate.mjs",
     "build": "npm run validate && npm run generate",
     "test": "node --test test/*.test.mjs",
-    "scan": "node scripts/scan-public.mjs"
+    "scan": "node scripts/scan-public.mjs",
+    "verify:published": "node scripts/check-published.mjs"
   }
 }
-

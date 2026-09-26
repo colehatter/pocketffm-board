@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T06:28:31Z",
+  "updated": "2026-09-26T07:11:50Z",
   "gates": [
     {
       "id": "G1",
@@ -35,7 +35,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-backup-summary",
-      "receipt_url": "/receipts/closeout-backup-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-backup-summary.html",
       "summary": "Sanitized backup and restore verification is ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -47,7 +47,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-test-summary",
-      "receipt_url": "/receipts/closeout-test-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-test-summary.html",
       "summary": "Sanitized automated test results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -59,7 +59,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-route-summary",
-      "receipt_url": "/receipts/closeout-route-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-route-summary.html",
       "summary": "Sanitized route availability results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -71,7 +71,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-access-summary",
-      "receipt_url": "/receipts/closeout-access-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-access-summary.html",
       "summary": "Sanitized access-boundary results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -83,7 +83,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-feedback-summary",
-      "receipt_url": "/receipts/closeout-feedback-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-feedback-summary.html",
       "summary": "Sanitized feedback-write results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -95,7 +95,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-referral-summary",
-      "receipt_url": "/receipts/closeout-referral-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-referral-summary.html",
       "summary": "Sanitized referral privacy results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -107,7 +107,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "closeout-admin-summary",
-      "receipt_url": "/receipts/closeout-admin-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/closeout-admin-summary.html",
       "summary": "Sanitized admin-boundary results are ready for independent review.",
       "updated": "2026-09-26T04:04:14Z"
     },
@@ -119,7 +119,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "isolated-staging-environment",
-      "receipt_url": "/receipts/isolated-staging-environment.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/isolated-staging-environment.html",
       "summary": "An isolated loopback-only staging environment is complete and locally verified.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -167,7 +167,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "backup-archive-checksum",
-      "receipt_url": "/receipts/backup-archive-checksum.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/backup-archive-checksum.html",
       "summary": "The private production application archive and its restored copy have matching SHA-256 values.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -179,7 +179,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "retired-access-code-rejection",
-      "receipt_url": "/receipts/retired-access-code-rejection.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/retired-access-code-rejection.html",
       "summary": "Requests with no access code and with the retired code are both rejected.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -191,7 +191,7 @@
       "status": "blocked",
       "blocked_on": "A tester must enter the replacement code in the browser without sharing it with another system.",
       "receipt_ref": "referral-sidebar-browser-smoke",
-      "receipt_url": "/receipts/referral-sidebar-browser-smoke.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/referral-sidebar-browser-smoke.html",
       "summary": "The real browser sidebar smoke is awaiting a principal-controlled code entry.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -203,7 +203,7 @@
       "status": "blocked",
       "blocked_on": "Eight historical backup artifacts remain outside active code paths and require separately approved production cleanup.",
       "receipt_ref": "live-backup-artifact-audit",
-      "receipt_url": "/receipts/live-backup-artifact-audit.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/live-backup-artifact-audit.html",
       "summary": "The live application tree audit found remaining historical backup artifacts.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -215,7 +215,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "retired-code-documentation-scan",
-      "receipt_url": "/receipts/retired-code-documentation-scan.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/retired-code-documentation-scan.html",
       "summary": "The retired code is absent from current production documentation.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -227,7 +227,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "security-regression-coverage",
-      "receipt_url": "/receipts/security-regression-coverage.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/security-regression-coverage.html",
       "summary": "The five-test suite and its coverage of the patched boundaries are documented.",
       "updated": "2026-09-26T06:28:31Z"
     },
@@ -239,7 +239,7 @@
       "status": "done",
       "blocked_on": "",
       "receipt_ref": "routing-restoration-summary",
-      "receipt_url": "/receipts/routing-restoration-summary.html",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/routing-restoration-summary.html",
       "summary": "The routing omission, restoration, verification, and rollback path are documented without internal identifiers.",
       "updated": "2026-09-26T06:28:31Z"
     }
@@ -355,6 +355,11 @@
       "ts": "2026-09-26T06:28:31Z",
       "who": "wonder-woman",
       "what": "T-011 blocked: host currently unreachable"
+    },
+    {
+      "ts": "2026-09-26T07:11:50Z",
+      "who": "iron-man",
+      "what": "Board sync check added and receipt URLs made absolute"
     }
   ]
 }
