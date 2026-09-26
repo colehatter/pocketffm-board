@@ -1,0 +1,13 @@
+{
+  "id": "T-004",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Closeout access boundary",
+  "gate": "G1",
+  "status": "done",
+  "blocked_on": "",
+  "receipt_ref": "closeout-access-summary",
+  "summary": "Sanitized access-boundary results are ready for independent review.",
+  "updated": "2026-09-26T04:04:14Z"
+}
+

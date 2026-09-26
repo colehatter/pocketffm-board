@@ -1,0 +1,13 @@
+{
+  "id": "T-009",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Baseline evaluation",
+  "gate": "G1",
+  "status": "todo",
+  "blocked_on": "",
+  "receipt_ref": "",
+  "summary": "Run the approved baseline evaluation after orientation is accepted.",
+  "updated": "2026-09-26T04:04:14Z"
+}
+

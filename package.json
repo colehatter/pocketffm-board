@@ -1,0 +1,14 @@
+{
+  "name": "pocketffm-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sanitized static project board for the Pocket FFM launch",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "generate": "node scripts/generate.mjs",
+    "build": "npm run validate && npm run generate",
+    "test": "node --test test/*.test.mjs",
+    "scan": "node scripts/scan-public.mjs"
+  }
+}
+

@@ -1,0 +1,13 @@
+{
+  "id": "T-001",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Closeout backup verification",
+  "gate": "G1",
+  "status": "done",
+  "blocked_on": "",
+  "receipt_ref": "closeout-backup-summary",
+  "summary": "Sanitized backup and restore verification is ready for independent review.",
+  "updated": "2026-09-26T04:04:14Z"
+}
+

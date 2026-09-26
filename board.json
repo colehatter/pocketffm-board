@@ -1,0 +1,215 @@
+{
+  "updated": "2026-09-26T04:04:14Z",
+  "gates": [
+    {
+      "id": "G1",
+      "name": "Orientation reports",
+      "due": "2026-09-27",
+      "status": "open"
+    },
+    {
+      "id": "G2",
+      "name": "Retrieval evaluation",
+      "due": "2026-10-02",
+      "status": "open"
+    },
+    {
+      "id": "G3",
+      "name": "Load test and prelaunch test",
+      "due": "2026-10-04",
+      "status": "open"
+    },
+    {
+      "id": "G4",
+      "name": "Deploy sign-off",
+      "due": "2026-10-04",
+      "status": "open"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T-001",
+      "owner": "iron-man",
+      "title": "Closeout backup verification",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-backup-summary",
+      "summary": "Sanitized backup and restore verification is ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-002",
+      "owner": "iron-man",
+      "title": "Closeout automated tests",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-test-summary",
+      "summary": "Sanitized automated test results are ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-003",
+      "owner": "iron-man",
+      "title": "Closeout route availability",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-route-summary",
+      "summary": "Sanitized route availability results are ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-004",
+      "owner": "iron-man",
+      "title": "Closeout access boundary",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-access-summary",
+      "summary": "Sanitized access-boundary results are ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-005",
+      "owner": "iron-man",
+      "title": "Closeout feedback write",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-feedback-summary",
+      "summary": "Sanitized feedback-write results are ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-006",
+      "owner": "iron-man",
+      "title": "Closeout referral privacy",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-referral-summary",
+      "summary": "Sanitized referral privacy results are ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-007",
+      "owner": "iron-man",
+      "title": "Closeout admin boundary",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "closeout-admin-summary",
+      "summary": "Sanitized admin-boundary results are ready for independent review.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-008",
+      "owner": "iron-man",
+      "title": "Staging environment",
+      "gate": "G1",
+      "status": "todo",
+      "blocked_on": "",
+      "receipt_ref": "",
+      "summary": "Create an isolated staging environment after orientation is accepted.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-009",
+      "owner": "iron-man",
+      "title": "Baseline evaluation",
+      "gate": "G1",
+      "status": "todo",
+      "blocked_on": "",
+      "receipt_ref": "",
+      "summary": "Run the approved baseline evaluation after orientation is accepted.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-010",
+      "owner": "jarvis",
+      "title": "Jarvis orientation report",
+      "gate": "G1",
+      "status": "todo",
+      "blocked_on": "",
+      "receipt_ref": "",
+      "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
+      "updated": "2026-09-26T04:04:14Z"
+    },
+    {
+      "id": "T-011",
+      "owner": "wonder-woman",
+      "title": "Wonder Woman orientation report",
+      "gate": "G1",
+      "status": "todo",
+      "blocked_on": "",
+      "receipt_ref": "",
+      "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
+      "updated": "2026-09-26T04:04:14Z"
+    }
+  ],
+  "questions": [],
+  "log": [
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-001 done: backup verification summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-002 done: automated test summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-003 done: route availability summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-004 done: access boundary summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-005 done: feedback write summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-006 done: referral privacy summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-007 done: admin boundary summary ready"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-008 todo: staging environment queued"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "T-009 todo: baseline evaluation queued"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "iron-man",
+      "what": "Board initialized under approved governance"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "jarvis",
+      "what": "T-010 todo: orientation report queued"
+    },
+    {
+      "ts": "2026-09-26T04:04:14Z",
+      "who": "wonder-woman",
+      "what": "T-011 todo: orientation report queued"
+    }
+  ]
+}

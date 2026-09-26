@@ -1,0 +1,13 @@
+{
+  "id": "T-008",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Staging environment",
+  "gate": "G1",
+  "status": "todo",
+  "blocked_on": "",
+  "receipt_ref": "",
+  "summary": "Create an isolated staging environment after orientation is accepted.",
+  "updated": "2026-09-26T04:04:14Z"
+}
+
