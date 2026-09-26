@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-26T07:47:28Z",
+  "updated": "2026-09-26T08:02:11Z",
   "gates": [
     {
       "id": "G1",
       "name": "Orientation reports",
       "due": "2026-09-27",
-      "status": "ready"
+      "status": "open"
     },
     {
       "id": "G2",
@@ -285,11 +285,11 @@
       "title": "Sanitized builder staging access",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "The builder host must be reachable before isolated read-only copies can be delivered.",
+      "blocked_on": "Authenticated new-host provisioning must complete before isolated read-only copies can be delivered.",
       "receipt_ref": "sanitized-staging-handoff",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/sanitized-staging-handoff.html",
       "summary": "The full sanitized artifact and access procedure are ready; delivery awaits builder-host availability.",
-      "updated": "2026-09-26T07:37:09Z"
+      "updated": "2026-09-26T08:02:11Z"
     },
     {
       "id": "T-023",
@@ -302,40 +302,58 @@
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/pocket-ffm-csp-hotfix.html",
       "summary": "The existing Pocket FFM interface and browser behavior were restored without changing retrieval or application data.",
       "updated": "2026-09-26T07:47:28Z"
+    },
+    {
+      "id": "T-024",
+      "owner": "iron-man",
+      "title": "Launch host provisioning",
+      "gate": "G1",
+      "status": "blocked",
+      "blocked_on": "DigitalOcean authentication is required; no credential may be transmitted through chat.",
+      "receipt_ref": "launch-host-provisioning",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/launch-host-provisioning.html",
+      "summary": "Provision an isolated launch host in the existing region with the approved minimum capacity and hardened access.",
+      "updated": "2026-09-26T08:02:11Z"
+    },
+    {
+      "id": "T-025",
+      "owner": "iron-man",
+      "title": "New-host staging build",
+      "gate": "G1",
+      "status": "blocked",
+      "blocked_on": "T-024 host provisioning must complete first.",
+      "receipt_ref": "new-host-staging-build",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/new-host-staging-build.html",
+      "summary": "Build the isolated application, sanitized database, side indexes, process supervision, and builder runtimes on the new host.",
+      "updated": "2026-09-26T08:02:11Z"
+    },
+    {
+      "id": "T-026",
+      "owner": "iron-man",
+      "title": "Cutover and rollback plan",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "cutover-and-rollback-plan",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/cutover-and-rollback-plan.html",
+      "summary": "The October 5 cutover gate, preflight, rollback triggers, and preservation of the current host are documented.",
+      "updated": "2026-09-26T08:02:11Z"
+    },
+    {
+      "id": "T-027",
+      "owner": "iron-man",
+      "title": "Agent inbox and heartbeat activation",
+      "gate": "G1",
+      "status": "blocked",
+      "blocked_on": "Separate builder credentials and independent agent posts require the new host.",
+      "receipt_ref": "agent-inbox-heartbeat-activation",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/agent-inbox-heartbeat-activation.html",
+      "summary": "Activate credential-isolated acknowledgments and heartbeats for both builders, then hand Cole the sanitized credential inventory.",
+      "updated": "2026-09-26T08:02:11Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-005 done: feedback write summary ready"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-006 done: referral privacy summary ready"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-007 done: admin boundary summary ready"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-008 todo: staging environment queued"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-009 todo: baseline evaluation queued"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "Board initialized under approved governance"
-    },
     {
       "ts": "2026-09-26T04:04:14Z",
       "who": "jarvis",
@@ -455,6 +473,36 @@
       "ts": "2026-09-26T07:47:28Z",
       "who": "iron-man",
       "what": "T-023 done: Pocket FFM browser interface restored after CSP conflict"
+    },
+    {
+      "ts": "2026-09-26T08:02:11Z",
+      "who": "iron-man",
+      "what": "G1 reopened: new-host delivery and independent builder posts remain blocked"
+    },
+    {
+      "ts": "2026-09-26T08:02:11Z",
+      "who": "iron-man",
+      "what": "T-022 blocked: sanitized handoff awaits authenticated new-host provisioning"
+    },
+    {
+      "ts": "2026-09-26T08:02:11Z",
+      "who": "iron-man",
+      "what": "T-024 blocked: provider authentication required without transmitting credentials"
+    },
+    {
+      "ts": "2026-09-26T08:02:11Z",
+      "who": "iron-man",
+      "what": "T-025 blocked: staging build awaits the approved new host"
+    },
+    {
+      "ts": "2026-09-26T08:02:11Z",
+      "who": "iron-man",
+      "what": "T-026 done: documented separate cutover gate and rollback to the preserved current host"
+    },
+    {
+      "ts": "2026-09-26T08:02:11Z",
+      "who": "iron-man",
+      "what": "T-027 blocked: independent builder heartbeats await credential-isolated host access"
     }
   ]
 }

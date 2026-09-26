@@ -5,8 +5,8 @@
   "title": "Sanitized builder staging access",
   "gate": "G1",
   "status": "blocked",
-  "blocked_on": "The builder host must be reachable before isolated read-only copies can be delivered.",
+  "blocked_on": "Authenticated new-host provisioning must complete before isolated read-only copies can be delivered.",
   "receipt_ref": "sanitized-staging-handoff",
   "summary": "The full sanitized artifact and access procedure are ready; delivery awaits builder-host availability.",
-  "updated": "2026-09-26T07:37:09Z"
+  "updated": "2026-09-26T08:02:11Z"
 }
