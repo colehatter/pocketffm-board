@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-26T07:31:23Z",
+  "updated": "2026-09-26T07:37:09Z",
   "gates": [
     {
       "id": "G1",
       "name": "Orientation reports",
       "due": "2026-09-27",
-      "status": "open"
+      "status": "ready"
     },
     {
       "id": "G2",
@@ -120,20 +120,20 @@
       "blocked_on": "",
       "receipt_ref": "isolated-staging-environment",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/isolated-staging-environment.html",
-      "summary": "An isolated loopback-only staging environment is complete and locally verified.",
-      "updated": "2026-09-26T06:28:31Z"
+      "summary": "An isolated full-corpus staging database is sanitized, integrity-checked, and ready for controlled builder copies.",
+      "updated": "2026-09-26T07:37:09Z"
     },
     {
       "id": "T-009",
       "owner": "iron-man",
       "title": "Baseline evaluation",
       "gate": "G1",
-      "status": "in-progress",
-      "blocked_on": "",
+      "status": "blocked",
+      "blocked_on": "FFM subject-matter scoring and independent Jarvis verification are still required.",
       "receipt_ref": "baseline-evaluation-preliminary",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/baseline-evaluation-preliminary.html",
-      "summary": "The 25-question baseline and reviewer packet are ready; FFM human scoring and independent verification remain.",
-      "updated": "2026-09-26T07:31:23Z"
+      "summary": "The baseline and review packet are complete; the remaining work requires FFM human judgment and independent verification.",
+      "updated": "2026-09-26T07:37:09Z"
     },
     {
       "id": "T-010",
@@ -254,25 +254,46 @@
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/g2-retrieval-design.html",
       "summary": "A production-safe hybrid retrieval design is complete using the current canonical corpus and measured rollout gates.",
       "updated": "2026-09-26T07:31:23Z"
+    },
+    {
+      "id": "T-020",
+      "owner": "iron-man",
+      "title": "Builder branches and ownership",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "builder-branches-and-ownership",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/builder-branches-and-ownership.html",
+      "summary": "The two builder branches and private ownership contract are published from the current main baseline.",
+      "updated": "2026-09-26T07:37:09Z"
+    },
+    {
+      "id": "T-021",
+      "owner": "iron-man",
+      "title": "Capacity and rate-limit report",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "capacity-and-rate-limits",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/capacity-and-rate-limits.html",
+      "summary": "Private rate-limit and production-capacity evidence is recorded with a sanitized public summary.",
+      "updated": "2026-09-26T07:37:09Z"
+    },
+    {
+      "id": "T-022",
+      "owner": "iron-man",
+      "title": "Sanitized builder staging access",
+      "gate": "G1",
+      "status": "blocked",
+      "blocked_on": "The builder host must be reachable before isolated read-only copies can be delivered.",
+      "receipt_ref": "sanitized-staging-handoff",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/sanitized-staging-handoff.html",
+      "summary": "The full sanitized artifact and access procedure are ready; delivery awaits builder-host availability.",
+      "updated": "2026-09-26T07:37:09Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-001 done: backup verification summary ready"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-002 done: automated test summary ready"
-    },
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "iron-man",
-      "what": "T-003 done: route availability summary ready"
-    },
     {
       "ts": "2026-09-26T04:04:14Z",
       "who": "iron-man",
@@ -392,6 +413,36 @@
       "ts": "2026-09-26T07:31:23Z",
       "who": "iron-man",
       "what": "T-019 done: canonical hybrid retrieval design completed"
+    },
+    {
+      "ts": "2026-09-26T07:37:09Z",
+      "who": "iron-man",
+      "what": "T-008 done: full sanitized corpus staging copy verified"
+    },
+    {
+      "ts": "2026-09-26T07:37:09Z",
+      "who": "iron-man",
+      "what": "T-009 blocked: awaiting FFM human scoring and Jarvis verification"
+    },
+    {
+      "ts": "2026-09-26T07:37:09Z",
+      "who": "iron-man",
+      "what": "T-020 done: builder branches and ownership contract published"
+    },
+    {
+      "ts": "2026-09-26T07:37:09Z",
+      "who": "iron-man",
+      "what": "T-021 done: capacity and rate-limit evidence recorded"
+    },
+    {
+      "ts": "2026-09-26T07:37:09Z",
+      "who": "iron-man",
+      "what": "T-022 blocked: sanitized builder access awaits reachable host"
+    },
+    {
+      "ts": "2026-09-26T07:37:09Z",
+      "who": "iron-man",
+      "what": "G1 ready: all gate tasks are done or explicitly blocked"
     }
   ]
 }

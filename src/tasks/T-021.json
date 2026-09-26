@@ -1,0 +1,12 @@
+{
+  "id": "T-021",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Capacity and rate-limit report",
+  "gate": "G1",
+  "status": "done",
+  "blocked_on": "",
+  "receipt_ref": "capacity-and-rate-limits",
+  "summary": "Private rate-limit and production-capacity evidence is recorded with a sanitized public summary.",
+  "updated": "2026-09-26T07:37:09Z"
+}

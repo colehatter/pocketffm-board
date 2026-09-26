@@ -4,9 +4,9 @@
   "verifier": "jarvis",
   "title": "Baseline evaluation",
   "gate": "G1",
-  "status": "in-progress",
-  "blocked_on": "",
+  "status": "blocked",
+  "blocked_on": "FFM subject-matter scoring and independent Jarvis verification are still required.",
   "receipt_ref": "baseline-evaluation-preliminary",
-  "summary": "The 25-question baseline and reviewer packet are ready; FFM human scoring and independent verification remain.",
-  "updated": "2026-09-26T07:31:23Z"
+  "summary": "The baseline and review packet are complete; the remaining work requires FFM human judgment and independent verification.",
+  "updated": "2026-09-26T07:37:09Z"
 }

@@ -7,6 +7,6 @@
   "status": "done",
   "blocked_on": "",
   "receipt_ref": "isolated-staging-environment",
-  "summary": "An isolated loopback-only staging environment is complete and locally verified.",
-  "updated": "2026-09-26T06:28:31Z"
+  "summary": "An isolated full-corpus staging database is sanitized, integrity-checked, and ready for controlled builder copies.",
+  "updated": "2026-09-26T07:37:09Z"
 }

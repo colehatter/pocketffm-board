@@ -21,3 +21,9 @@
 {"ts":"2026-09-26T07:21:36Z","who":"iron-man","what":"T-009 in-progress: preliminary 25-question baseline captured"}
 {"ts":"2026-09-26T07:31:23Z","who":"iron-man","what":"T-009 in-progress: human review packet and scoresheet ready"}
 {"ts":"2026-09-26T07:31:23Z","who":"iron-man","what":"T-019 done: canonical hybrid retrieval design completed"}
+{"ts":"2026-09-26T07:37:09Z","who":"iron-man","what":"T-008 done: full sanitized corpus staging copy verified"}
+{"ts":"2026-09-26T07:37:09Z","who":"iron-man","what":"T-009 blocked: awaiting FFM human scoring and Jarvis verification"}
+{"ts":"2026-09-26T07:37:09Z","who":"iron-man","what":"T-020 done: builder branches and ownership contract published"}
+{"ts":"2026-09-26T07:37:09Z","who":"iron-man","what":"T-021 done: capacity and rate-limit evidence recorded"}
+{"ts":"2026-09-26T07:37:09Z","who":"iron-man","what":"T-022 blocked: sanitized builder access awaits reachable host"}
+{"ts":"2026-09-26T07:37:09Z","who":"iron-man","what":"G1 ready: all gate tasks are done or explicitly blocked"}

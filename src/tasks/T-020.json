@@ -1,0 +1,12 @@
+{
+  "id": "T-020",
+  "owner": "iron-man",
+  "verifier": "jarvis",
+  "title": "Builder branches and ownership",
+  "gate": "G1",
+  "status": "done",
+  "blocked_on": "",
+  "receipt_ref": "builder-branches-and-ownership",
+  "summary": "The two builder branches and private ownership contract are published from the current main baseline.",
+  "updated": "2026-09-26T07:37:09Z"
+}
