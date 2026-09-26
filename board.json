@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T20:15:16Z",
+  "updated": "2026-09-26T20:47:25Z",
   "gates": [
     {
       "id": "G1",
@@ -141,11 +141,11 @@
       "title": "Jarvis orientation report",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "Jarvis host is currently unreachable from the coordination environment.",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
-      "updated": "2026-09-26T06:28:31Z"
+      "blocked_on": "Awaiting builder session setup on staging host.",
+      "receipt_ref": "t010-jarvis-staging-access",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/t010-jarvis-staging-access.html",
+      "summary": "Run the isolated Claude Code retrieval builder and publish its sanitized orientation report.",
+      "updated": "2026-09-26T20:41:42Z"
     },
     {
       "id": "T-011",
@@ -153,11 +153,11 @@
       "title": "Wonder Woman orientation report",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "Wonder Woman host is currently unreachable from the coordination environment.",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
-      "updated": "2026-09-26T06:28:31Z"
+      "blocked_on": "Awaiting builder session setup on staging host.",
+      "receipt_ref": "t011-wonder-woman-staging-access",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/t011-wonder-woman-staging-access.html",
+      "summary": "Run the isolated Claude Code access-scale builder and publish its sanitized orientation report.",
+      "updated": "2026-09-26T20:41:43Z"
     },
     {
       "id": "T-012",
@@ -308,12 +308,12 @@
       "owner": "iron-man",
       "title": "Launch host provisioning",
       "gate": "G1",
-      "status": "blocked",
-      "blocked_on": "DigitalOcean authentication is required; no credential may be transmitted through chat.",
+      "status": "done",
+      "blocked_on": "",
       "receipt_ref": "launch-host-provisioning",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/launch-host-provisioning.html",
       "summary": "Provision an isolated launch host in the existing region with the approved minimum capacity and hardened access.",
-      "updated": "2026-09-26T08:02:11Z"
+      "updated": "2026-09-26T20:47:23Z"
     },
     {
       "id": "T-025",
@@ -321,11 +321,11 @@
       "title": "New-host staging build",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "T-024 host provisioning must complete first.",
+      "blocked_on": "Awaiting original side-index delivery, separate builder credentials, first orientation reports, reboot recovery, and pre-cutover sudo restriction.",
       "receipt_ref": "new-host-staging-build",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/new-host-staging-build.html",
-      "summary": "Build the isolated application, sanitized database, side indexes, process supervision, and builder runtimes on the new host.",
-      "updated": "2026-09-26T08:02:11Z"
+      "summary": "Complete staging build, original side-index verification, isolated builder runtimes, rollback proof, and pocketops sudo restriction.",
+      "updated": "2026-09-26T20:47:24Z"
     },
     {
       "id": "T-026",
@@ -342,38 +342,18 @@
     {
       "id": "T-027",
       "owner": "iron-man",
-      "title": "Agent inbox and heartbeat activation",
+      "title": "Builder inbox and heartbeat activation",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "Separate builder credentials and independent agent posts require the new host.",
+      "blocked_on": "Awaiting separate builder API credentials and the first isolated orientation reports.",
       "receipt_ref": "agent-inbox-heartbeat-activation",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/agent-inbox-heartbeat-activation.html",
-      "summary": "Activate credential-isolated acknowledgments and heartbeats for both builders, then hand Cole the sanitized credential inventory.",
-      "updated": "2026-09-26T08:02:11Z"
+      "summary": "Activate credential-isolated Claude Code builder sessions and publish sanitized foreground receipts.",
+      "updated": "2026-09-26T20:47:25Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T04:04:14Z",
-      "who": "wonder-woman",
-      "what": "T-011 todo: orientation report queued"
-    },
-    {
-      "ts": "2026-09-26T06:28:31Z",
-      "who": "iron-man",
-      "what": "T-008 done: isolated staging environment passed local verification"
-    },
-    {
-      "ts": "2026-09-26T06:28:31Z",
-      "who": "iron-man",
-      "what": "T-012 done: private archive checksum matched its restored copy"
-    },
-    {
-      "ts": "2026-09-26T06:28:31Z",
-      "who": "iron-man",
-      "what": "T-013 done: missing and retired access codes rejected"
-    },
     {
       "ts": "2026-09-26T06:28:31Z",
       "who": "iron-man",
@@ -500,9 +480,29 @@
       "what": "T-027 blocked: independent builder heartbeats await credential-isolated host access"
     },
     {
-      "ts": "2026-09-26T20:15:16Z",
+      "ts": "2026-09-26T20:41:42Z",
       "who": "iron-man",
-      "what": "G1 open: publish T-010 and T-011 staging access audit receipts and builder merge rule"
+      "what": "T-010 blocked: awaiting isolated Claude Code retrieval builder session"
+    },
+    {
+      "ts": "2026-09-26T20:41:43Z",
+      "who": "iron-man",
+      "what": "T-011 blocked: awaiting isolated Claude Code access-scale builder session"
+    },
+    {
+      "ts": "2026-09-26T20:47:23Z",
+      "who": "iron-man",
+      "what": "T-024 done: hardened isolated staging host provisioned and verified"
+    },
+    {
+      "ts": "2026-09-26T20:47:24Z",
+      "who": "iron-man",
+      "what": "T-025 blocked: indexes, builder reports, reboot proof, and sudo restriction remain"
+    },
+    {
+      "ts": "2026-09-26T20:47:25Z",
+      "who": "iron-man",
+      "what": "T-027 blocked: separate builder credentials and orientation reports remain"
     }
   ]
 }

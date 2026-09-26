@@ -5,8 +5,8 @@
   "title": "Wonder Woman orientation report",
   "gate": "G1",
   "status": "blocked",
-  "blocked_on": "Wonder Woman host is currently unreachable from the coordination environment.",
-  "receipt_ref": "",
-  "summary": "Review the assigned system boundary and submit a sanitized orientation report.",
-  "updated": "2026-09-26T06:28:31Z"
+  "blocked_on": "Awaiting builder session setup on staging host.",
+  "receipt_ref": "t011-wonder-woman-staging-access",
+  "summary": "Run the isolated Claude Code access-scale builder and publish its sanitized orientation report.",
+  "updated": "2026-09-26T20:41:43Z"
 }
