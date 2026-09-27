@@ -111,3 +111,6 @@
 {"ts":"2026-09-27T19:21:42Z","who":"iron-man","what":"T-045 blocked: provider activation awaits T-040 and Cole's credential, sender domain, and authentication records"}
 {"ts":"2026-09-27T19:21:43Z","who":"iron-man","what":"T-037 blocked: security, integration, and exclusive seam receipts posted for Claude's joint GO review"}
 {"ts":"2026-09-27T19:21:44Z","who":"cole","what":"A1 and A2 unblocked through sink and environment adapters; three launch questions remain open"}
+{"ts":"2026-09-27T19:27:23Z","who":"iron-man","what":"T-037 in-progress: Claude GO recorded and isolated hybrid retrieval builder started"}
+{"ts":"2026-09-27T19:27:24Z","who":"iron-man","what":"T-046 blocked: answerability lite awaits Dan or Mary approval of the configured no-answer wording"}
+{"ts":"2026-09-27T19:27:25Z","who":"cole","what":"T-037 GO accepted with degradation, quality, latency, unchanged answerability, and T-046 production gates"}

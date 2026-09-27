@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T19:21:44Z",
+  "updated": "2026-09-27T19:27:25Z",
   "gates": [
     {
       "id": "G1",
@@ -464,12 +464,12 @@
       "owner": "claude",
       "title": "Hybrid retrieval integration behind flag",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "Awaits Claude's joint review of T-034, T-035, and the published seam assignment, plus the final enable criterion and latency budget.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "t037-seam-assignment",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/t037-seam-assignment.html",
-      "summary": "The exclusive query.js and embed.js seams are published for Claude's final T-037 GO review.",
-      "updated": "2026-09-27T19:21:43Z"
+      "summary": "Building default-off hybrid retrieval with measured quality, latency, degradation, and ownership gates; production enablement remains held by T-046.",
+      "updated": "2026-09-27T19:27:23Z"
     },
     {
       "id": "T-038",
@@ -566,6 +566,18 @@
       "receipt_url": "",
       "summary": "Activate the real sender adapter through secrets and environment, verify delivery, then rerun Phase 1 email burst validation.",
       "updated": "2026-09-27T19:21:42Z"
+    },
+    {
+      "id": "T-046",
+      "owner": "claude",
+      "title": "Answerability lite",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Awaits Dan or Mary approval of the configured no-answer wording through Q-004.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Add legal-guidance refusal, an approved no-answer message, and isolated unanswered-question capture before hybrid retrieval can be enabled in production.",
+      "updated": "2026-09-27T19:27:24Z"
     }
   ],
   "questions": [
@@ -592,24 +604,17 @@
       "text": "What exact QR URL domain should be the primary allowed origin?",
       "status": "open",
       "answer": ""
+    },
+    {
+      "id": "Q-004",
+      "from": "iron-man",
+      "for": "cole",
+      "text": "Will Dan or Mary approve the exact no-answer wording, and what should Pocket FFM say when its loaded content cannot support an answer?",
+      "status": "open",
+      "answer": ""
     }
   ],
   "log": [
-    {
-      "ts": "2026-09-27T17:51:31Z",
-      "who": "iron-man",
-      "what": "T-031 done: sqlite-vec passed all nine compatibility checks"
-    },
-    {
-      "ts": "2026-09-27T17:51:32Z",
-      "who": "iron-man",
-      "what": "T-032 done: FTS5 shadow artifact indexed all canonical chunks and passed 13 tests"
-    },
-    {
-      "ts": "2026-09-27T17:51:33Z",
-      "who": "iron-man",
-      "what": "T-033 done: fixed lexical baseline and metric table completed"
-    },
     {
       "ts": "2026-09-27T17:51:34Z",
       "who": "iron-man",
@@ -744,6 +749,21 @@
       "ts": "2026-09-27T19:21:44Z",
       "who": "cole",
       "what": "A1 and A2 unblocked through sink and environment adapters; three launch questions remain open"
+    },
+    {
+      "ts": "2026-09-27T19:27:23Z",
+      "who": "iron-man",
+      "what": "T-037 in-progress: Claude GO recorded and isolated hybrid retrieval builder started"
+    },
+    {
+      "ts": "2026-09-27T19:27:24Z",
+      "who": "iron-man",
+      "what": "T-046 blocked: answerability lite awaits Dan or Mary approval of the configured no-answer wording"
+    },
+    {
+      "ts": "2026-09-27T19:27:25Z",
+      "who": "cole",
+      "what": "T-037 GO accepted with degradation, quality, latency, unchanged answerability, and T-046 production gates"
     }
   ]
 }
