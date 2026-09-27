@@ -76,3 +76,7 @@
 {"ts":"2026-09-27T16:50:50Z","who":"iron-man","what":"G1 passed: Claude approval recorded through Cole"}
 {"ts":"2026-09-27T17:12:19Z","who":"iron-man","what":"T-038 blocked: semantic-unit artifacts delivered to staging by Cole are required"}
 {"ts":"2026-09-27T17:12:20Z","who":"iron-man","what":"Board publish check hardened to exact timestamp and content match with GitHub main"}
+{"ts":"2026-09-27T17:14:21Z","who":"iron-man","what":"T-030 in-progress: provenance audit started under G1 GO"}
+{"ts":"2026-09-27T17:14:22Z","who":"iron-man","what":"T-031 in-progress: sqlite-vec compatibility spike started under G1 GO"}
+{"ts":"2026-09-27T17:14:23Z","who":"iron-man","what":"T-032 in-progress: FTS5 shadow index started under G1 GO"}
+{"ts":"2026-09-27T17:14:24Z","who":"iron-man","what":"T-033 in-progress: lexical baseline evaluation harness started under G1 GO"}

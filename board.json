@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T17:12:20Z",
+  "updated": "2026-09-27T17:14:24Z",
   "gates": [
     {
       "id": "G1",
@@ -380,48 +380,48 @@
       "owner": "claude",
       "title": "Embedding provenance audit",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "G1 GO is recorded. Held by Cole's no-build directive.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Audit embedding dimension, finite values, normalization, duplicates, and model provenance without feature changes.",
-      "updated": "2026-09-27T16:50:38Z"
+      "updated": "2026-09-27T17:14:21Z"
     },
     {
       "id": "T-031",
       "owner": "claude",
       "title": "SQLite vector compatibility spike",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "G1 GO and the sqlite-vec precondition are recorded. Held by Cole's no-build directive.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Prove extension installation, loading, query, backup, restore, and fallback behavior on sanitized staging.",
-      "updated": "2026-09-27T16:50:39Z"
+      "updated": "2026-09-27T17:14:22Z"
     },
     {
       "id": "T-032",
       "owner": "claude",
       "title": "FTS5 shadow index",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "G1 GO is recorded. Held by Cole's no-build directive.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Build a canonical chunk-ID-keyed FTS5 shadow index while preserving the current retrieval path and rollback.",
-      "updated": "2026-09-27T16:50:40Z"
+      "updated": "2026-09-27T17:14:23Z"
     },
     {
       "id": "T-033",
       "owner": "claude",
       "title": "Retrieval evaluation harness",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "G1 GO is recorded. Held by Cole's no-build directive.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Run the lexical baseline, produce the metric table, and keep later variant slots stubbed without changing application responses.",
-      "updated": "2026-09-27T16:50:41Z"
+      "updated": "2026-09-27T17:14:24Z"
     },
     {
       "id": "T-034",
@@ -559,26 +559,6 @@
   "questions": [],
   "log": [
     {
-      "ts": "2026-09-27T15:13:03Z",
-      "who": "iron-man",
-      "what": "T-027 blocked: two approval-gated Claude builders are idle; first reports remain pending"
-    },
-    {
-      "ts": "2026-09-27T16:22:02Z",
-      "who": "iron-man",
-      "what": "T-010 done: Retrieval Builder orientation completed with a sanitized receipt"
-    },
-    {
-      "ts": "2026-09-27T16:22:03Z",
-      "who": "iron-man",
-      "what": "T-011 done: Access Builder orientation completed with a sanitized receipt"
-    },
-    {
-      "ts": "2026-09-27T16:22:04Z",
-      "who": "iron-man",
-      "what": "T-027 in-progress: eight workers are idle and six build gates remain closed"
-    },
-    {
       "ts": "2026-09-27T16:22:05Z",
       "who": "iron-man",
       "what": "T-028 done: G2 decomposed into six dependency-ordered packages"
@@ -707,6 +687,26 @@
       "ts": "2026-09-27T17:12:20Z",
       "who": "iron-man",
       "what": "Board publish check hardened to exact timestamp and content match with GitHub main"
+    },
+    {
+      "ts": "2026-09-27T17:14:21Z",
+      "who": "iron-man",
+      "what": "T-030 in-progress: provenance audit started under G1 GO"
+    },
+    {
+      "ts": "2026-09-27T17:14:22Z",
+      "who": "iron-man",
+      "what": "T-031 in-progress: sqlite-vec compatibility spike started under G1 GO"
+    },
+    {
+      "ts": "2026-09-27T17:14:23Z",
+      "who": "iron-man",
+      "what": "T-032 in-progress: FTS5 shadow index started under G1 GO"
+    },
+    {
+      "ts": "2026-09-27T17:14:24Z",
+      "who": "iron-man",
+      "what": "T-033 in-progress: lexical baseline evaluation harness started under G1 GO"
     }
   ]
 }
