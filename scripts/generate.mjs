@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { loadSources, publicBoard, root } from './lib.mjs';
 
 const board = publicBoard(loadSources());
@@ -30,6 +31,11 @@ const dist = path.join(root, 'dist');
 fs.mkdirSync(dist, { recursive: true });
 fs.writeFileSync(path.join(dist, 'board.json'), json);
 fs.writeFileSync(path.join(dist, 'index.html'), html);
+const commitSha = (process.env.VERCEL_GIT_COMMIT_SHA || execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' })).trim();
+if (!/^[0-9a-f]{40}$/.test(commitSha)) throw new Error('Cannot generate a commit-stamped snapshot without a valid Git commit SHA');
+const snapshotDirectory = path.join(dist, 'snapshots');
+fs.mkdirSync(snapshotDirectory, { recursive: true });
+fs.writeFileSync(path.join(snapshotDirectory, `${commitSha.slice(0, 7)}.json`), json);
 const receiptDirectory = path.join(root, 'receipts');
 const distReceiptDirectory = path.join(dist, 'receipts');
 fs.mkdirSync(receiptDirectory, { recursive: true });
@@ -47,4 +53,4 @@ fs.rmSync(publicOrientationDirectory, { recursive: true, force: true });
 fs.rmSync(distOrientationDirectory, { recursive: true, force: true });
 fs.cpSync(sourceOrientationDirectory, publicOrientationDirectory, { recursive: true });
 fs.cpSync(sourceOrientationDirectory, distOrientationDirectory, { recursive: true });
-console.log(`GENERATED: ${board.gates.length} gates, ${board.tasks.length} tasks, ${board.log.length} recent log entries`);
+console.log(`GENERATED: ${board.gates.length} gates, ${board.tasks.length} tasks, ${board.log.length} recent log entries, snapshot ${commitSha.slice(0, 7)}`);

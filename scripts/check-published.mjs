@@ -1,6 +1,7 @@
 const siteUrl = process.env.POCKETFFM_BOARD_SITE_URL || 'https://pocketffm-board.vercel.app/board.json';
 const mainUrl = process.env.POCKETFFM_BOARD_MAIN_URL || 'https://api.github.com/repos/colehatter/pocketffm-board/contents/board.json?ref=main';
 const mainCommitUrl = process.env.POCKETFFM_BOARD_MAIN_COMMIT_URL || 'https://api.github.com/repos/colehatter/pocketffm-board/commits/main';
+const snapshotBaseUrl = process.env.POCKETFFM_BOARD_SNAPSHOT_BASE_URL || 'https://pocketffm-board.vercel.app/snapshots';
 
 function cacheBusted(url) {
   const parsed = new URL(url);
@@ -37,6 +38,7 @@ const [published, main, mainCommit] = await Promise.all([
   fetchBoard(mainUrl, 'GitHub main board'),
   fetchMainCommit()
 ]);
+const snapshot = await fetchBoard(`${snapshotBaseUrl}/${mainCommit.slice(0, 7)}.json`, 'Commit-stamped snapshot');
 
 if (published.updatedMs !== main.updatedMs) {
   throw new Error(`Published board timestamp does not match GitHub main commit ${mainCommit}: ${published.board.updated} != ${main.board.updated}`);
@@ -46,4 +48,8 @@ if (JSON.stringify(published.board) !== JSON.stringify(main.board)) {
   throw new Error(`Published board content does not match GitHub main commit ${mainCommit}`);
 }
 
-console.log(`PUBLISHED BOARD EXACT: ${published.board.updated} at GitHub main ${mainCommit}`);
+if (snapshot.updatedMs !== main.updatedMs || JSON.stringify(snapshot.board) !== JSON.stringify(main.board)) {
+  throw new Error(`Commit-stamped snapshot does not match GitHub main commit ${mainCommit}`);
+}
+
+console.log(`PUBLISHED BOARD EXACT: ${published.board.updated} at GitHub main ${mainCommit}; snapshot ${snapshotBaseUrl}/${mainCommit.slice(0, 7)}.json`);

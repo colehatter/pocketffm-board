@@ -25,6 +25,7 @@ test('passed gates require a Cole approval record', () => {
 
 test('generated artifacts are static and match the public schema', () => {
   execFileSync(process.execPath, ['scripts/generate.mjs'], { cwd: root });
+  const commitSha = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
   const board = JSON.parse(fs.readFileSync(path.join(root, 'board.json'), 'utf8'));
   assert.deepEqual(Object.keys(board), ['updated', 'gates', 'tasks', 'questions', 'log']);
   assert.deepEqual(Object.keys(board.tasks[0]), ['id', 'owner', 'title', 'gate', 'status', 'blocked_on', 'receipt_ref', 'receipt_url', 'summary', 'updated']);
@@ -40,4 +41,5 @@ test('generated artifacts are static and match the public schema', () => {
   assert.equal(fs.existsSync(path.join(root, 'receipts', 'closeout-backup-summary.html')), true);
   assert.equal(fs.existsSync(path.join(root, 'orientation-reports', 'T-010', 'orientation-report.json')), true);
   assert.equal(fs.existsSync(path.join(root, 'orientation-reports', 'T-011', 'orientation-report.json')), true);
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root, 'dist', 'snapshots', `${commitSha.slice(0, 7)}.json`), 'utf8')), board);
 });
