@@ -1,3 +1,3 @@
 {
-  "id": "T-040", "owner": "claude", "verifier": "iron-man", "title": "A1 membership and login", "gate": "G3", "status": "blocked", "blocked_on": "Claude GO.", "receipt_ref": "", "summary": "Verify fail-closed membership and session lifecycle behavior without cross-tenant access.", "updated": "2026-09-27T16:50:33Z"
+  "id": "T-040", "owner": "claude", "verifier": "iron-man", "title": "A1 membership and login", "gate": "G3", "status": "blocked", "blocked_on": "GO recorded; email provider credential and member-list delivery remain Cole dependencies.", "receipt_ref": "", "summary": "Implement fail-closed membership, single-use login codes, admin-only import, and the guarded beta-code path.", "updated": "2026-09-27T17:51:34Z"
 }

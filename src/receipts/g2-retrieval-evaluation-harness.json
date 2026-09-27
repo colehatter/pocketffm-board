@@ -1,0 +1,15 @@
+{
+  "id": "g2-retrieval-evaluation-harness",
+  "title": "T-033 retrieval evaluation harness",
+  "result": "pass",
+  "summary": "The deterministic harness ran the fixed 25-question set against the lexical baseline and left later retrieval variants stubbed.",
+  "evidence": [
+    "The lexical baseline ran all 25 questions with no zero-result question.",
+    "The metric table records result count, top source, refusal alignment, and latency per question.",
+    "Refusal alignment was correct on 20 of 25 questions.",
+    "The independent rerun reported 65.04 ms mean retrieval latency and 104.63 ms P95.",
+    "FTS5, vector, and fusion slots remain explicitly stubbed.",
+    "Only report artifacts were added, the database checksum remained unchanged, and the worktree has no remote."
+  ],
+  "limitations": "This establishes the lexical baseline, not a production cutover threshold or final answer-quality score."
+}

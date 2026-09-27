@@ -80,3 +80,15 @@
 {"ts":"2026-09-27T17:14:22Z","who":"iron-man","what":"T-031 in-progress: sqlite-vec compatibility spike started under G1 GO"}
 {"ts":"2026-09-27T17:14:23Z","who":"iron-man","what":"T-032 in-progress: FTS5 shadow index started under G1 GO"}
 {"ts":"2026-09-27T17:14:24Z","who":"iron-man","what":"T-033 in-progress: lexical baseline evaluation harness started under G1 GO"}
+{"ts":"2026-09-27T17:51:30Z","who":"iron-man","what":"T-030 done: 26,559 embeddings audited with no re-embedding required"}
+{"ts":"2026-09-27T17:51:31Z","who":"iron-man","what":"T-031 done: sqlite-vec passed all nine compatibility checks"}
+{"ts":"2026-09-27T17:51:32Z","who":"iron-man","what":"T-032 done: FTS5 shadow artifact indexed all canonical chunks and passed 13 tests"}
+{"ts":"2026-09-27T17:51:33Z","who":"iron-man","what":"T-033 done: fixed lexical baseline and metric table completed"}
+{"ts":"2026-09-27T17:51:34Z","who":"iron-man","what":"T-040 blocked: GO recorded; awaits Cole email credential and member list"}
+{"ts":"2026-09-27T17:51:35Z","who":"iron-man","what":"T-041 blocked: GO recorded; awaits Cole allowed-origin list"}
+{"ts":"2026-09-27T17:51:36Z","who":"iron-man","what":"T-042 blocked: NO-GO pending provider policy and ownership seams"}
+{"ts":"2026-09-27T17:51:37Z","who":"iron-man","what":"T-043 blocked: GO to build and HOLD to run pending targets, dependencies, and spend cap"}
+{"ts":"2026-09-27T17:51:38Z","who":"iron-man","what":"T-037 blocked: architecture approved with enablement, latency, and ownership gates"}
+{"ts":"2026-09-27T17:51:39Z","who":"iron-man","what":"T-038 blocked: architecture approved pending semantic-unit artifacts and join coverage"}
+{"ts":"2026-09-27T17:51:40Z","who":"iron-man","what":"T-039 blocked: architecture approved pending A3 queue, evaluation set, metric, and ownership"}
+{"ts":"2026-09-27T17:51:42Z","who":"iron-man","what":"Claude A-series and retrieval architecture review recorded with conditional gates"}

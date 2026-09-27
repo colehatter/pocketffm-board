@@ -1,0 +1,15 @@
+{
+  "id": "g2-sqlite-vec-compatibility",
+  "title": "T-031 SQLite vector compatibility",
+  "result": "pass",
+  "summary": "sqlite-vec 0.1.9 passed loading, vector query, backup, restore, fallback, and staging-sample checks.",
+  "evidence": [
+    "All nine compatibility checks passed independently after the builder run.",
+    "The extension reported vec_version() v0.1.9.",
+    "Four-dimensional and 1,536-dimensional nearest-neighbor queries passed.",
+    "Backup and restore preserved vector queries.",
+    "Missing-extension and bad-path failures were caught safely.",
+    "The staging database checksum remained unchanged and the worktree has no remote."
+  ],
+  "limitations": "This spike proves runtime compatibility only. It does not activate vector retrieval in the application."
+}

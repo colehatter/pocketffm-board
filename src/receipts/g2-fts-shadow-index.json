@@ -1,0 +1,15 @@
+{
+  "id": "g2-fts-shadow-index",
+  "title": "T-032 FTS5 shadow index",
+  "result": "pass",
+  "summary": "A separate FTS5 shadow artifact was built for all 26,559 canonical chunks without modifying the canonical database or live retrieval path.",
+  "evidence": [
+    "The artifact contains 26,559 search documents and 1,185 sources keyed by canonical chunk ID.",
+    "Thirteen focused tests passed, including schema, indexing, ranking, bridge compatibility, failure, and idempotent rebuild cases.",
+    "The builder, focused test, report, and isolated shadow artifact are the only additions.",
+    "The canonical staging database checksum remained unchanged and the worktree has no remote.",
+    "The existing lexical path remains the fallback when the shadow artifact is absent or invalid.",
+    "Rollback requires removing the separate artifact and clearing its configuration path."
+  ],
+  "limitations": "The artifact is isolated staging output and is not configured in production."
+}

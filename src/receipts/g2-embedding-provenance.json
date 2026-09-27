@@ -1,0 +1,15 @@
+{
+  "id": "g2-embedding-provenance",
+  "title": "T-030 embedding provenance audit",
+  "result": "pass",
+  "summary": "All 26,559 staging embeddings passed dimension, finite-value, and normalization checks. No re-embedding is required.",
+  "evidence": [
+    "All 26,559 vectors are 1,536-dimensional, finite, and unit-normalized within tolerance.",
+    "One exact content-level duplicate was found and classified low severity.",
+    "The embedding model is code-inferred as OpenAI text-embedding-3-small because the database does not store model provenance.",
+    "The missing embedding_model column is recorded as medium-severity schema debt.",
+    "Only the sanitized report was added, the worktree has no remote, and the read-only database checksum remained unchanged.",
+    "The successful Claude run was subscription-included with no metered Anthropic API billing."
+  ],
+  "limitations": "Model provenance remains inferred until a future schema change records it explicitly."
+}
