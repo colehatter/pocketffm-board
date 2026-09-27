@@ -40,4 +40,11 @@ for (const receipt of loadSources().receipts) {
   fs.writeFileSync(path.join(receiptDirectory, `${receipt.id}.html`), receiptHtml);
   fs.writeFileSync(path.join(distReceiptDirectory, `${receipt.id}.html`), receiptHtml);
 }
+const sourceOrientationDirectory = path.join(root, 'src', 'orientation-reports');
+const publicOrientationDirectory = path.join(root, 'orientation-reports');
+const distOrientationDirectory = path.join(dist, 'orientation-reports');
+fs.rmSync(publicOrientationDirectory, { recursive: true, force: true });
+fs.rmSync(distOrientationDirectory, { recursive: true, force: true });
+fs.cpSync(sourceOrientationDirectory, publicOrientationDirectory, { recursive: true });
+fs.cpSync(sourceOrientationDirectory, distOrientationDirectory, { recursive: true });
 console.log(`GENERATED: ${board.gates.length} gates, ${board.tasks.length} tasks, ${board.log.length} recent log entries`);

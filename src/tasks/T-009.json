@@ -4,9 +4,9 @@
   "verifier": "jarvis",
   "title": "Baseline evaluation",
   "gate": "G1",
-  "status": "blocked",
-  "blocked_on": "FFM subject-matter scoring and independent Jarvis verification are still required.",
+  "status": "done",
+  "blocked_on": "",
   "receipt_ref": "baseline-evaluation-preliminary",
-  "summary": "The baseline and review packet are complete; the remaining work requires FFM human judgment and independent verification.",
-  "updated": "2026-09-26T07:37:09Z"
+  "summary": "The preliminary baseline and review packet are preserved. T-033 supersedes this task with the reproducible G2 evaluation harness.",
+  "updated": "2026-09-27T16:50:29Z"
 }

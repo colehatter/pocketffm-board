@@ -1,0 +1,16 @@
+{
+  "id": "g1-workforce-review",
+  "title": "Claude G1 workforce review",
+  "result": "pass",
+  "summary": "Claude approved T-030 through T-033 for parallel execution. T-034 and T-035 remain dependency-gated.",
+  "evidence": [
+    "G1 passed through Cole on 2026-09-27.",
+    "T-030, T-031, T-032, and T-033 received GO.",
+    "T-034 remains blocked until valid T-030 through T-033 receipts exist.",
+    "T-035 remains blocked until valid T-030 through T-034 receipts exist.",
+    "sqlite-vec 0.1.9 and its Linux x64 package were integrity-checked, installed root-owned, and load-tested with vec_version() returning v0.1.9.",
+    "T-033 must run the lexical baseline, produce its metric table, and may stub later variant slots.",
+    "Anthropic API usage remains zero."
+  ],
+  "limitations": "If T-030 finds bad provenance, staging re-embedding remains separately execution-gated even though up to $5 has been budgeted."
+}

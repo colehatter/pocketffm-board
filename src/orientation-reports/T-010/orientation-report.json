@@ -1,0 +1,3 @@
+{
+  "task": "T-010", "report": "orientation", "result": "pass", "lane": "retrieval-1a", "scope": ["retrieval module", "retrieval tests", "evaluation tooling"], "database": {"integrity": "ok", "content_chunks": 26559, "sanitized": true}, "retrieval": {"side_indexes_configured": false, "side_index_files_found": 0, "current_fallback": "lexical scoring over canonical content_chunks"}, "changes": ["reports/orientation-report.json"], "production_untouched": true, "git_remote_present": false, "metered_anthropic_api_billing": false
+}

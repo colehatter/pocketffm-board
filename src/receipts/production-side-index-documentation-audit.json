@@ -1,0 +1,15 @@
+{
+  "id": "production-side-index-documentation-audit",
+  "title": "Production side-index documentation audit",
+  "result": "pass",
+  "summary": "Repository production documentation indicates that production does not load FTS5 side indexes and falls back to lexical scoring over canonical content_chunks.",
+  "evidence": [
+    "START-HERE.md says the side-index bridge is used only when configured.",
+    "The production pass documentation does not define an FFM side-index path.",
+    "The production file manifest contains knowledgeBridge.js but no side-index SQLite artifact.",
+    "knowledgeBridge.js requires an explicit path or the default data/ffm_indexes directory.",
+    "query.js falls back to lexical scoring when hasBridgeIndexes() is false.",
+    "The G2 design records that the default directory was absent during live configuration inspection."
+  ],
+  "limitations": "This is a repository-documentation finding. No production connection was made."
+}

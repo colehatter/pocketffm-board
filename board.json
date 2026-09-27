@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-27T16:22:13Z",
+  "updated": "2026-09-27T16:50:50Z",
   "gates": [
     {
       "id": "G1",
       "name": "Orientation reports",
       "due": "2026-09-27",
-      "status": "open"
+      "status": "passed"
     },
     {
       "id": "G2",
@@ -128,12 +128,12 @@
       "owner": "iron-man",
       "title": "Baseline evaluation",
       "gate": "G1",
-      "status": "blocked",
-      "blocked_on": "FFM subject-matter scoring and independent Jarvis verification are still required.",
+      "status": "done",
+      "blocked_on": "",
       "receipt_ref": "baseline-evaluation-preliminary",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/baseline-evaluation-preliminary.html",
-      "summary": "The baseline and review packet are complete; the remaining work requires FFM human judgment and independent verification.",
-      "updated": "2026-09-26T07:37:09Z"
+      "summary": "The preliminary baseline and review packet are preserved. T-033 supersedes this task with the reproducible G2 evaluation harness.",
+      "updated": "2026-09-27T16:50:29Z"
     },
     {
       "id": "T-010",
@@ -381,11 +381,11 @@
       "title": "Embedding provenance audit",
       "gate": "G2",
       "status": "blocked",
-      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "blocked_on": "G1 GO is recorded. Held by Cole's no-build directive.",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Audit embedding dimension, finite values, normalization, duplicates, and model provenance without feature changes.",
-      "updated": "2026-09-27T16:22:07Z"
+      "updated": "2026-09-27T16:50:38Z"
     },
     {
       "id": "T-031",
@@ -393,11 +393,11 @@
       "title": "SQLite vector compatibility spike",
       "gate": "G2",
       "status": "blocked",
-      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "blocked_on": "G1 GO and the sqlite-vec precondition are recorded. Held by Cole's no-build directive.",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Prove extension installation, loading, query, backup, restore, and fallback behavior on sanitized staging.",
-      "updated": "2026-09-27T16:22:08Z"
+      "updated": "2026-09-27T16:50:39Z"
     },
     {
       "id": "T-032",
@@ -405,11 +405,11 @@
       "title": "FTS5 shadow index",
       "gate": "G2",
       "status": "blocked",
-      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "blocked_on": "G1 GO is recorded. Held by Cole's no-build directive.",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Build a canonical chunk-ID-keyed FTS5 shadow index while preserving the current retrieval path and rollback.",
-      "updated": "2026-09-27T16:22:09Z"
+      "updated": "2026-09-27T16:50:40Z"
     },
     {
       "id": "T-033",
@@ -417,11 +417,11 @@
       "title": "Retrieval evaluation harness",
       "gate": "G2",
       "status": "blocked",
-      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "blocked_on": "G1 GO is recorded. Held by Cole's no-build directive.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Compare lexical, FTS5, vector, and reciprocal-rank-fusion variants without changing application responses.",
-      "updated": "2026-09-27T16:22:10Z"
+      "summary": "Run the lexical baseline, produce the metric table, and keep later variant slots stubbed without changing application responses.",
+      "updated": "2026-09-27T16:50:41Z"
     },
     {
       "id": "T-034",
@@ -452,91 +452,112 @@
       "owner": "claude",
       "title": "Independent G1 workforce review",
       "gate": "G1",
-      "status": "in-progress",
+      "status": "done",
       "blocked_on": "",
+      "receipt_ref": "g1-workforce-review",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/g1-workforce-review.html",
+      "summary": "Claude completed the independent review and issued GO for T-030 through T-033 while preserving downstream gates.",
+      "updated": "2026-09-27T16:50:42Z"
+    },
+    {
+      "id": "T-037",
+      "owner": "claude",
+      "title": "Hybrid retrieval integration behind flag",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "T-030 through T-034 receipts and separate Claude GO.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Review both orientation receipts and issue explicit per-builder GO or NO-GO instructions before any build starts.",
-      "updated": "2026-09-27T16:22:13Z"
+      "summary": "Integrate lexical, FTS5, and vector retrieval behind a default-off feature flag with automatic fallback and one-flag rollback.",
+      "updated": "2026-09-27T16:50:30Z"
+    },
+    {
+      "id": "T-038",
+      "owner": "claude",
+      "title": "Timestamp-aware citations",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "T-032, T-037, timestamp coverage audit, and Claude GO.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Add validated timestamp citations while preserving source visibility and safe URL-only fallback.",
+      "updated": "2026-09-27T16:50:31Z"
+    },
+    {
+      "id": "T-039",
+      "owner": "claude",
+      "title": "History-aware retrieval rewrite",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "T-033, T-037, fixed follow-up evaluation set, and Claude GO.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Use minimal recent context to clarify follow-up retrieval without persistent member memory or unsupported claims.",
+      "updated": "2026-09-27T16:50:32Z"
+    },
+    {
+      "id": "T-040",
+      "owner": "claude",
+      "title": "A1 membership and login",
+      "gate": "G3",
+      "status": "blocked",
+      "blocked_on": "Claude GO.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Verify fail-closed membership and session lifecycle behavior without cross-tenant access.",
+      "updated": "2026-09-27T16:50:33Z"
+    },
+    {
+      "id": "T-041",
+      "owner": "claude",
+      "title": "A2 rate limits and CORS",
+      "gate": "G3",
+      "status": "blocked",
+      "blocked_on": "Claude GO.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Make request limits durable across processes and enforce credential-safe origin policy.",
+      "updated": "2026-09-27T16:50:34Z"
+    },
+    {
+      "id": "T-042",
+      "owner": "claude",
+      "title": "A3 LLM queue and failover",
+      "gate": "G3",
+      "status": "blocked",
+      "blocked_on": "T-040, approved provider policy, and Claude GO.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Add bounded concurrency, queueing, timeout, retry ownership, and fail-closed provider behavior.",
+      "updated": "2026-09-27T16:50:35Z"
+    },
+    {
+      "id": "T-043",
+      "owner": "claude",
+      "title": "A4 access and load harness",
+      "gate": "G3",
+      "status": "blocked",
+      "blocked_on": "T-040 through T-042 and Claude GO.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Exercise access, CORS, rate-limit, queue saturation, and latency behavior with zero production traffic.",
+      "updated": "2026-09-27T16:50:36Z"
+    },
+    {
+      "id": "T-044",
+      "owner": "iron-man",
+      "title": "Production side-index documentation audit",
+      "gate": "G2",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "production-side-index-documentation-audit",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/production-side-index-documentation-audit.html",
+      "summary": "Repository documentation indicates production uses lexical fallback because no FTS5 side-index path or artifact is configured.",
+      "updated": "2026-09-27T16:50:37Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T08:02:11Z",
-      "who": "iron-man",
-      "what": "T-022 blocked: sanitized handoff awaits authenticated new-host provisioning"
-    },
-    {
-      "ts": "2026-09-26T08:02:11Z",
-      "who": "iron-man",
-      "what": "T-024 blocked: provider authentication required without transmitting credentials"
-    },
-    {
-      "ts": "2026-09-26T08:02:11Z",
-      "who": "iron-man",
-      "what": "T-025 blocked: staging build awaits the approved new host"
-    },
-    {
-      "ts": "2026-09-26T08:02:11Z",
-      "who": "iron-man",
-      "what": "T-026 done: documented separate cutover gate and rollback to the preserved current host"
-    },
-    {
-      "ts": "2026-09-26T08:02:11Z",
-      "who": "iron-man",
-      "what": "T-027 blocked: independent builder heartbeats await credential-isolated host access"
-    },
-    {
-      "ts": "2026-09-26T20:41:42Z",
-      "who": "iron-man",
-      "what": "T-010 blocked: awaiting isolated Claude Code retrieval builder session"
-    },
-    {
-      "ts": "2026-09-26T20:41:43Z",
-      "who": "iron-man",
-      "what": "T-011 blocked: awaiting isolated Claude Code access-scale builder session"
-    },
-    {
-      "ts": "2026-09-26T20:47:23Z",
-      "who": "iron-man",
-      "what": "T-024 done: hardened isolated staging host provisioned and verified"
-    },
-    {
-      "ts": "2026-09-26T20:47:24Z",
-      "who": "iron-man",
-      "what": "T-025 blocked: indexes, builder reports, reboot proof, and sudo restriction remain"
-    },
-    {
-      "ts": "2026-09-26T20:47:25Z",
-      "who": "iron-man",
-      "what": "T-027 blocked: separate builder credentials and orientation reports remain"
-    },
-    {
-      "ts": "2026-09-26T21:48:44Z",
-      "who": "iron-man",
-      "what": "Builder runtime switched from Anthropic API billing to isolated Codex CLI OAuth"
-    },
-    {
-      "ts": "2026-09-26T21:48:45Z",
-      "who": "iron-man",
-      "what": "T-010 blocked: Codex CLI installed; separate ChatGPT device authorization remains"
-    },
-    {
-      "ts": "2026-09-26T21:48:46Z",
-      "who": "iron-man",
-      "what": "T-011 blocked: Codex CLI installed; separate ChatGPT device authorization remains"
-    },
-    {
-      "ts": "2026-09-26T21:48:47Z",
-      "who": "iron-man",
-      "what": "T-027 blocked: separate ChatGPT device authorizations and orientation reports remain"
-    },
-    {
-      "ts": "2026-09-27T15:13:00Z",
-      "who": "iron-man",
-      "what": "Claude Max command-center canary passed with zero Anthropic API billing"
-    },
     {
       "ts": "2026-09-27T15:13:01Z",
       "who": "iron-man",
@@ -611,6 +632,81 @@
       "ts": "2026-09-27T16:22:13Z",
       "who": "iron-man",
       "what": "T-036 in-progress: independent Claude G1 workforce review queued"
+    },
+    {
+      "ts": "2026-09-27T16:50:29Z",
+      "who": "iron-man",
+      "what": "T-009 done: preliminary baseline preserved and superseded by T-033"
+    },
+    {
+      "ts": "2026-09-27T16:50:30Z",
+      "who": "iron-man",
+      "what": "T-037 blocked: hybrid integration awaits prerequisite receipts and Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:31Z",
+      "who": "iron-man",
+      "what": "T-038 blocked: timestamp citations await dependencies, coverage audit, and GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:32Z",
+      "who": "iron-man",
+      "what": "T-039 blocked: history rewrite awaits dependencies, evaluation set, and GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:33Z",
+      "who": "iron-man",
+      "what": "T-040 blocked: A1 membership and login package awaits Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:34Z",
+      "who": "iron-man",
+      "what": "T-041 blocked: A2 rate limits and CORS package awaits Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:35Z",
+      "who": "iron-man",
+      "what": "T-042 blocked: A3 LLM queue and failover awaits dependencies and Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:36Z",
+      "who": "iron-man",
+      "what": "T-043 blocked: A4 load harness awaits A1 through A3 and Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:50:37Z",
+      "who": "iron-man",
+      "what": "T-044 done: repository documentation indicates production uses lexical fallback"
+    },
+    {
+      "ts": "2026-09-27T16:50:38Z",
+      "who": "iron-man",
+      "what": "T-030 blocked: G1 GO recorded; held by Cole's no-build directive"
+    },
+    {
+      "ts": "2026-09-27T16:50:39Z",
+      "who": "iron-man",
+      "what": "T-031 blocked: GO and sqlite-vec precondition recorded; held by no-build directive"
+    },
+    {
+      "ts": "2026-09-27T16:50:40Z",
+      "who": "iron-man",
+      "what": "T-032 blocked: G1 GO recorded; held by Cole's no-build directive"
+    },
+    {
+      "ts": "2026-09-27T16:50:41Z",
+      "who": "iron-man",
+      "what": "T-033 blocked: GO and lexical-baseline acceptance recorded; held by no-build directive"
+    },
+    {
+      "ts": "2026-09-27T16:50:42Z",
+      "who": "iron-man",
+      "what": "T-036 done: Claude G1 workforce review passed"
+    },
+    {
+      "ts": "2026-09-27T16:50:50Z",
+      "who": "iron-man",
+      "what": "G1 passed: Claude approval recorded through Cole"
     }
   ]
 }

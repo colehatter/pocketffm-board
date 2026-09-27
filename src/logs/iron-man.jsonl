@@ -59,3 +59,18 @@
 {"ts":"2026-09-27T16:22:11Z","who":"iron-man","what":"T-034 blocked: security review depends on T-030 through T-033"}
 {"ts":"2026-09-27T16:22:12Z","who":"iron-man","what":"T-035 blocked: integration review depends on T-030 through T-034"}
 {"ts":"2026-09-27T16:22:13Z","who":"iron-man","what":"T-036 in-progress: independent Claude G1 workforce review queued"}
+{"ts":"2026-09-27T16:50:29Z","who":"iron-man","what":"T-009 done: preliminary baseline preserved and superseded by T-033"}
+{"ts":"2026-09-27T16:50:30Z","who":"iron-man","what":"T-037 blocked: hybrid integration awaits prerequisite receipts and Claude GO"}
+{"ts":"2026-09-27T16:50:31Z","who":"iron-man","what":"T-038 blocked: timestamp citations await dependencies, coverage audit, and GO"}
+{"ts":"2026-09-27T16:50:32Z","who":"iron-man","what":"T-039 blocked: history rewrite awaits dependencies, evaluation set, and GO"}
+{"ts":"2026-09-27T16:50:33Z","who":"iron-man","what":"T-040 blocked: A1 membership and login package awaits Claude GO"}
+{"ts":"2026-09-27T16:50:34Z","who":"iron-man","what":"T-041 blocked: A2 rate limits and CORS package awaits Claude GO"}
+{"ts":"2026-09-27T16:50:35Z","who":"iron-man","what":"T-042 blocked: A3 LLM queue and failover awaits dependencies and Claude GO"}
+{"ts":"2026-09-27T16:50:36Z","who":"iron-man","what":"T-043 blocked: A4 load harness awaits A1 through A3 and Claude GO"}
+{"ts":"2026-09-27T16:50:37Z","who":"iron-man","what":"T-044 done: repository documentation indicates production uses lexical fallback"}
+{"ts":"2026-09-27T16:50:38Z","who":"iron-man","what":"T-030 blocked: G1 GO recorded; held by Cole's no-build directive"}
+{"ts":"2026-09-27T16:50:39Z","who":"iron-man","what":"T-031 blocked: GO and sqlite-vec precondition recorded; held by no-build directive"}
+{"ts":"2026-09-27T16:50:40Z","who":"iron-man","what":"T-032 blocked: G1 GO recorded; held by Cole's no-build directive"}
+{"ts":"2026-09-27T16:50:41Z","who":"iron-man","what":"T-033 blocked: GO and lexical-baseline acceptance recorded; held by no-build directive"}
+{"ts":"2026-09-27T16:50:42Z","who":"iron-man","what":"T-036 done: Claude G1 workforce review passed"}
+{"ts":"2026-09-27T16:50:50Z","who":"iron-man","what":"G1 passed: Claude approval recorded through Cole"}

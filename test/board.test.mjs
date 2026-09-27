@@ -19,6 +19,7 @@ test('self-verification is rejected', () => {
 test('passed gates require a Cole approval record', () => {
   const sources = structuredClone(loadSources());
   sources.gates[0].status = 'passed';
+  sources.approvals = sources.approvals.filter(approval => approval.gate !== sources.gates[0].id);
   assert.throws(() => validateSources(sources), /without src\/approvals\/G1\.json/);
 });
 
@@ -37,4 +38,6 @@ test('generated artifacts are static and match the public schema', () => {
   assert.match(html, /Latest activity/);
   assert.match(html, /href="https:\/\/pocketffm-board\.vercel\.app\/receipts\/closeout-backup-summary\.html"/);
   assert.equal(fs.existsSync(path.join(root, 'receipts', 'closeout-backup-summary.html')), true);
+  assert.equal(fs.existsSync(path.join(root, 'orientation-reports', 'T-010', 'orientation-report.json')), true);
+  assert.equal(fs.existsSync(path.join(root, 'orientation-reports', 'T-011', 'orientation-report.json')), true);
 });

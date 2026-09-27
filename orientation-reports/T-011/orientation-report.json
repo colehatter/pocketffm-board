@@ -1,0 +1,3 @@
+{
+  "task": "T-011", "report": "orientation", "result": "pass", "lane": "access-scale", "scope": ["authentication", "authorization", "membership access", "referral protection", "request limits"], "database": {"integrity": "ok", "content_chunks": 26559, "sanitized": true}, "controls_mapped": ["missing access rejected", "retired access rejected", "administrative access fails closed", "referral contact fields excluded"], "changes": ["reports/orientation-report.json"], "production_untouched": true, "git_remote_present": false, "metered_anthropic_api_billing": false
+}

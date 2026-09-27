@@ -1,0 +1,1 @@
+{"task":"T-040","lane":"access-a1-membership-login","dependencies":[],"acceptance_tests":["Anonymous requests are rejected","Valid members succeed","Expired and revoked access fail closed","Renewal cannot cross tenant boundaries","Logout invalidates the session","Secrets do not enter logs"],"output":"reports/access-a1-membership-login.json"}

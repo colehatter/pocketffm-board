@@ -1,0 +1,1 @@
+{"task":"T-041","lane":"access-a2-rate-limits-cors","dependencies":[],"acceptance_tests":["Rate limits hold across processes","Authorized preflight succeeds","Unknown origins receive no CORS permission headers","Credentialed responses never use wildcard origins","Health routes remain bounded","Regression tests pass"],"output":"reports/access-a2-rate-limits-cors.json"}
