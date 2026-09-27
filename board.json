@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T17:55:23Z",
+  "updated": "2026-09-27T18:44:28Z",
   "gates": [
     {
       "id": "G1",
@@ -336,8 +336,8 @@
       "blocked_on": "",
       "receipt_ref": "cutover-and-rollback-plan",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/cutover-and-rollback-plan.html",
-      "summary": "The October 5 cutover gate, preflight, rollback triggers, and preservation of the current host are documented.",
-      "updated": "2026-09-26T08:02:11Z"
+      "summary": "The October 5 cutover gate includes a Dan and Mary provider decision, credential swap, preflight, rollback triggers, and preservation of the current host.",
+      "updated": "2026-09-27T18:38:13Z"
     },
     {
       "id": "T-027",
@@ -428,12 +428,12 @@
       "owner": "claude",
       "title": "G2 retrieval security review",
       "gate": "G2",
-      "status": "in-progress",
+      "status": "done",
       "blocked_on": "",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Review tenant scope, citation visibility, malformed embeddings, extension failure, fallback, and rollback.",
-      "updated": "2026-09-27T17:55:23Z"
+      "receipt_ref": "g2-retrieval-security-review",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/g2-retrieval-security-review.html",
+      "summary": "The read-only security review passed with no blockers and recorded conditional safeguards for T-037.",
+      "updated": "2026-09-27T18:44:27Z"
     },
     {
       "id": "T-035",
@@ -524,12 +524,12 @@
       "owner": "claude",
       "title": "A3 LLM queue and failover",
       "gate": "G3",
-      "status": "blocked",
-      "blocked_on": "NO-GO pending Cole provider policy, explicit ownership seams, and queue identity approval.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Add a session-or-IP keyed model queue with bounded concurrency, retry ownership, and controlled failover.",
-      "updated": "2026-09-27T17:51:36Z"
+      "summary": "Building a session-or-IP keyed model queue using the existing application Anthropic key with OpenAI failover while builder Anthropic API billing remains zero.",
+      "updated": "2026-09-27T18:44:28Z"
     },
     {
       "id": "T-043",
@@ -537,11 +537,11 @@
       "title": "A4 access and load harness",
       "gate": "G3",
       "status": "blocked",
-      "blocked_on": "GO to build, HOLD to run; depends on T-040 through T-042, numeric targets, and Cole's load-test spend cap.",
+      "blocked_on": "GO to build, HOLD to run; depends on T-040 through T-042 completing.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Build the admin-gated load harness, but do not run it until dependencies, numeric targets, and spend cap are approved.",
-      "updated": "2026-09-27T17:51:37Z"
+      "summary": "Build an admin-gated harness for p95 at or below 8 seconds, error rate under 1 percent, and zero SQLite busy errors at 1,000 concurrent, with a $50 spend cap.",
+      "updated": "2026-09-27T18:38:15Z"
     },
     {
       "id": "T-044",
@@ -558,31 +558,6 @@
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-27T16:50:33Z",
-      "who": "iron-man",
-      "what": "T-040 blocked: A1 membership and login package awaits Claude GO"
-    },
-    {
-      "ts": "2026-09-27T16:50:34Z",
-      "who": "iron-man",
-      "what": "T-041 blocked: A2 rate limits and CORS package awaits Claude GO"
-    },
-    {
-      "ts": "2026-09-27T16:50:35Z",
-      "who": "iron-man",
-      "what": "T-042 blocked: A3 LLM queue and failover awaits dependencies and Claude GO"
-    },
-    {
-      "ts": "2026-09-27T16:50:36Z",
-      "who": "iron-man",
-      "what": "T-043 blocked: A4 load harness awaits A1 through A3 and Claude GO"
-    },
-    {
-      "ts": "2026-09-27T16:50:37Z",
-      "who": "iron-man",
-      "what": "T-044 done: repository documentation indicates production uses lexical fallback"
-    },
     {
       "ts": "2026-09-27T16:50:38Z",
       "who": "iron-man",
@@ -707,6 +682,31 @@
       "ts": "2026-09-27T17:55:23Z",
       "who": "iron-man",
       "what": "T-034 in-progress: retrieval security review started on read-only first-cycle artifacts"
+    },
+    {
+      "ts": "2026-09-27T18:38:13Z",
+      "who": "cole",
+      "what": "Pocket FFM application provider policy approved through October 5; builder Anthropic API billing remains zero"
+    },
+    {
+      "ts": "2026-09-27T18:38:14Z",
+      "who": "iron-man",
+      "what": "T-026 updated: Dan and Mary provider decision and credential swap added to cutover checklist"
+    },
+    {
+      "ts": "2026-09-27T18:38:15Z",
+      "who": "iron-man",
+      "what": "T-043 targets approved: p95 8 seconds, error rate under 1 percent, zero SQLite busy at 1,000 concurrent, $50 cap"
+    },
+    {
+      "ts": "2026-09-27T18:44:27Z",
+      "who": "iron-man",
+      "what": "T-034 done: retrieval security review passed with no blocking issues"
+    },
+    {
+      "ts": "2026-09-27T18:44:28Z",
+      "who": "iron-man",
+      "what": "T-042 in-progress: provider policy and ownership seams cleared; isolated A3 builder started"
     }
   ]
 }
