@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T19:15:06Z",
+  "updated": "2026-09-27T19:21:44Z",
   "gates": [
     {
       "id": "G1",
@@ -465,11 +465,11 @@
       "title": "Hybrid retrieval integration behind flag",
       "gate": "G2",
       "status": "blocked",
-      "blocked_on": "Architecture approved; awaits T-034, T-033 enable criterion, latency budget, and OWNERSHIP.md seams.",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Integrate lexical, FTS5, and vector retrieval behind a default-off flag with measured enablement and rollback gates.",
-      "updated": "2026-09-27T17:51:38Z"
+      "blocked_on": "Awaits Claude's joint review of T-034, T-035, and the published seam assignment, plus the final enable criterion and latency budget.",
+      "receipt_ref": "t037-seam-assignment",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/t037-seam-assignment.html",
+      "summary": "The exclusive query.js and embed.js seams are published for Claude's final T-037 GO review.",
+      "updated": "2026-09-27T19:21:43Z"
     },
     {
       "id": "T-038",
@@ -500,24 +500,24 @@
       "owner": "claude",
       "title": "A1 registration and passwordless login",
       "gate": "G3",
-      "status": "blocked",
-      "blocked_on": "GO recorded; awaits Cole's email provider credential and verified sending domain.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Implement open-link email registration, queued single-use verification codes, abuse controls, and the guarded beta-code path without a member allowlist.",
-      "updated": "2026-09-27T19:15:01Z"
+      "summary": "Building open-link email registration against a sender interface and staging log sink, with no member allowlist or live provider dependency.",
+      "updated": "2026-09-27T19:21:39Z"
     },
     {
       "id": "T-041",
       "owner": "claude",
       "title": "A2 rate limits and CORS",
       "gate": "G3",
-      "status": "blocked",
-      "blocked_on": "GO recorded; awaits Cole's QR URL domain as the primary allowed origin.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Add durable per-IP limits for registration and verification, session limits, Retry-After, and credential-safe CORS for the QR URL domain.",
-      "updated": "2026-09-27T19:15:02Z"
+      "summary": "Building environment-driven origins with a placeholder test origin plus durable registration and verification rate limits.",
+      "updated": "2026-09-27T19:21:40Z"
     },
     {
       "id": "T-042",
@@ -537,11 +537,11 @@
       "title": "A4 launch and answer load harness",
       "gate": "G3",
       "status": "blocked",
-      "blocked_on": "GO to build, HOLD to run; depends on T-040 and T-041 completing.",
+      "blocked_on": "GO to build; sink-backed Phase 1 runs after T-040 and T-041 pass, then real-email Phase 1 reruns under T-045.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Test a 1,000-visitor registration burst followed by steady question traffic, with queued email, 8-second answer p95, under 1 percent errors, and zero SQLite busy errors.",
-      "updated": "2026-09-27T19:15:03Z"
+      "summary": "Run the two-phase launch profile first against the email sink, then repeat real-email delivery validation through T-045.",
+      "updated": "2026-09-27T19:21:41Z"
     },
     {
       "id": "T-044",
@@ -554,6 +554,18 @@
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/production-side-index-documentation-audit.html",
       "summary": "Repository documentation indicates production uses lexical fallback because no FTS5 side-index path or artifact is configured.",
       "updated": "2026-09-27T16:50:37Z"
+    },
+    {
+      "id": "T-045",
+      "owner": "claude",
+      "title": "Transactional email provider activation",
+      "gate": "G3",
+      "status": "blocked",
+      "blocked_on": "Awaits T-040, Cole's provider credential, verified sending domain and From address, and SPF/DKIM readiness.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Activate the real sender adapter through secrets and environment, verify delivery, then rerun Phase 1 email burst validation.",
+      "updated": "2026-09-27T19:21:42Z"
     }
   ],
   "questions": [
@@ -583,36 +595,6 @@
     }
   ],
   "log": [
-    {
-      "ts": "2026-09-27T17:12:20Z",
-      "who": "iron-man",
-      "what": "Board publish check hardened to exact timestamp and content match with GitHub main"
-    },
-    {
-      "ts": "2026-09-27T17:14:21Z",
-      "who": "iron-man",
-      "what": "T-030 in-progress: provenance audit started under G1 GO"
-    },
-    {
-      "ts": "2026-09-27T17:14:22Z",
-      "who": "iron-man",
-      "what": "T-031 in-progress: sqlite-vec compatibility spike started under G1 GO"
-    },
-    {
-      "ts": "2026-09-27T17:14:23Z",
-      "who": "iron-man",
-      "what": "T-032 in-progress: FTS5 shadow index started under G1 GO"
-    },
-    {
-      "ts": "2026-09-27T17:14:24Z",
-      "who": "iron-man",
-      "what": "T-033 in-progress: lexical baseline evaluation harness started under G1 GO"
-    },
-    {
-      "ts": "2026-09-27T17:51:30Z",
-      "who": "iron-man",
-      "what": "T-030 done: 26,559 embeddings audited with no re-embedding required"
-    },
     {
       "ts": "2026-09-27T17:51:31Z",
       "who": "iron-man",
@@ -732,6 +714,36 @@
       "ts": "2026-09-27T19:15:06Z",
       "who": "cole",
       "what": "Launch access model approved: distribution-gated registration without a member roster"
+    },
+    {
+      "ts": "2026-09-27T19:21:39Z",
+      "who": "iron-man",
+      "what": "T-040 in-progress: isolated A1 builder started against the sender interface and staging log sink"
+    },
+    {
+      "ts": "2026-09-27T19:21:40Z",
+      "who": "iron-man",
+      "what": "T-041 in-progress: isolated A2 builder started with environment-driven placeholder origin"
+    },
+    {
+      "ts": "2026-09-27T19:21:41Z",
+      "who": "iron-man",
+      "what": "T-043 blocked: sink-backed Phase 1 awaits T-040 and T-041; real-email rerun moves to T-045"
+    },
+    {
+      "ts": "2026-09-27T19:21:42Z",
+      "who": "iron-man",
+      "what": "T-045 blocked: provider activation awaits T-040 and Cole's credential, sender domain, and authentication records"
+    },
+    {
+      "ts": "2026-09-27T19:21:43Z",
+      "who": "iron-man",
+      "what": "T-037 blocked: security, integration, and exclusive seam receipts posted for Claude's joint GO review"
+    },
+    {
+      "ts": "2026-09-27T19:21:44Z",
+      "who": "cole",
+      "what": "A1 and A2 unblocked through sink and environment adapters; three launch questions remain open"
     }
   ]
 }
