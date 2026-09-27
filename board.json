@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T17:51:42Z",
+  "updated": "2026-09-27T17:55:23Z",
   "gates": [
     {
       "id": "G1",
@@ -428,12 +428,12 @@
       "owner": "claude",
       "title": "G2 retrieval security review",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "Depends on T-030, T-031, T-032, and T-033 passing their acceptance tests.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Review tenant scope, citation visibility, malformed embeddings, extension failure, fallback, and rollback.",
-      "updated": "2026-09-27T16:22:11Z"
+      "updated": "2026-09-27T17:55:23Z"
     },
     {
       "id": "T-035",
@@ -558,11 +558,6 @@
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-27T16:50:32Z",
-      "who": "iron-man",
-      "what": "T-039 blocked: history rewrite awaits dependencies, evaluation set, and GO"
-    },
     {
       "ts": "2026-09-27T16:50:33Z",
       "who": "iron-man",
@@ -707,6 +702,11 @@
       "ts": "2026-09-27T17:51:42Z",
       "who": "iron-man",
       "what": "Claude A-series and retrieval architecture review recorded with conditional gates"
+    },
+    {
+      "ts": "2026-09-27T17:55:23Z",
+      "who": "iron-man",
+      "what": "T-034 in-progress: retrieval security review started on read-only first-cycle artifacts"
     }
   ]
 }
