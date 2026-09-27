@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T21:48:47Z",
+  "updated": "2026-09-27T15:13:03Z",
   "gates": [
     {
       "id": "G1",
@@ -138,26 +138,26 @@
     {
       "id": "T-010",
       "owner": "jarvis",
-      "title": "Jarvis orientation report",
+      "title": "Retrieval Builder orientation report",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "awaiting builder session setup on staging host.",
+      "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
       "receipt_ref": "t010-jarvis-staging-access",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/t010-jarvis-staging-access.html",
-      "summary": "Run the isolated Codex CLI retrieval builder and publish its sanitized orientation report.",
-      "updated": "2026-09-26T21:48:45Z"
+      "summary": "Run the isolated subscription-backed Claude retrieval builder and publish its sanitized orientation report.",
+      "updated": "2026-09-27T15:13:01Z"
     },
     {
       "id": "T-011",
       "owner": "wonder-woman",
-      "title": "Wonder Woman orientation report",
+      "title": "Access Builder orientation report",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "awaiting builder session setup on staging host.",
+      "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
       "receipt_ref": "t011-wonder-woman-staging-access",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/t011-wonder-woman-staging-access.html",
-      "summary": "Run the isolated Codex CLI access-scale builder and publish its sanitized orientation report.",
-      "updated": "2026-09-26T21:48:46Z"
+      "summary": "Run the isolated subscription-backed Claude access-scale builder and publish its sanitized orientation report.",
+      "updated": "2026-09-27T15:13:02Z"
     },
     {
       "id": "T-012",
@@ -345,35 +345,15 @@
       "title": "Builder inbox and heartbeat activation",
       "gate": "G1",
       "status": "blocked",
-      "blocked_on": "Awaiting separate builder ChatGPT OAuth sessions and the first isolated orientation reports.",
+      "blocked_on": "Subscription-backed Claude builders are live and approval-gated; first orientation reports remain pending.",
       "receipt_ref": "agent-inbox-heartbeat-activation",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/agent-inbox-heartbeat-activation.html",
-      "summary": "Activate credential-isolated Codex CLI builder sessions and publish sanitized foreground receipts.",
-      "updated": "2026-09-26T21:48:47Z"
+      "summary": "Activate isolated Claude builder sessions through the loopback-only command center and publish sanitized foreground receipts.",
+      "updated": "2026-09-27T15:13:03Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T06:28:31Z",
-      "who": "iron-man",
-      "what": "T-018 done: routing restoration and rollback summarized"
-    },
-    {
-      "ts": "2026-09-26T06:28:31Z",
-      "who": "jarvis",
-      "what": "T-010 blocked: host currently unreachable"
-    },
-    {
-      "ts": "2026-09-26T06:28:31Z",
-      "who": "wonder-woman",
-      "what": "T-011 blocked: host currently unreachable"
-    },
-    {
-      "ts": "2026-09-26T07:11:50Z",
-      "who": "iron-man",
-      "what": "Board sync check added and receipt URLs made absolute"
-    },
     {
       "ts": "2026-09-26T07:21:35Z",
       "who": "iron-man",
@@ -503,6 +483,26 @@
       "ts": "2026-09-26T21:48:47Z",
       "who": "iron-man",
       "what": "T-027 blocked: separate ChatGPT device authorizations and orientation reports remain"
+    },
+    {
+      "ts": "2026-09-27T15:13:00Z",
+      "who": "iron-man",
+      "what": "Claude Max command-center canary passed with zero Anthropic API billing"
+    },
+    {
+      "ts": "2026-09-27T15:13:01Z",
+      "who": "iron-man",
+      "what": "T-010 blocked: Retrieval Builder ready; bounded orientation awaits human approval"
+    },
+    {
+      "ts": "2026-09-27T15:13:02Z",
+      "who": "iron-man",
+      "what": "T-011 blocked: Access Builder ready; bounded orientation awaits human approval"
+    },
+    {
+      "ts": "2026-09-27T15:13:03Z",
+      "who": "iron-man",
+      "what": "T-027 blocked: two approval-gated Claude builders are idle; first reports remain pending"
     }
   ]
 }

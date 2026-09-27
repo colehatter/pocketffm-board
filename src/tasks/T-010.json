@@ -2,11 +2,11 @@
   "id": "T-010",
   "owner": "jarvis",
   "verifier": "iron-man",
-  "title": "Jarvis orientation report",
+  "title": "Retrieval Builder orientation report",
   "gate": "G1",
   "status": "blocked",
-  "blocked_on": "awaiting builder session setup on staging host.",
+  "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
   "receipt_ref": "t010-jarvis-staging-access",
-  "summary": "Run the isolated Codex CLI retrieval builder and publish its sanitized orientation report.",
-  "updated": "2026-09-26T21:48:45Z"
+  "summary": "Run the isolated subscription-backed Claude retrieval builder and publish its sanitized orientation report.",
+  "updated": "2026-09-27T15:13:01Z"
 }
