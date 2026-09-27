@@ -4,9 +4,9 @@
   "verifier": "iron-man",
   "title": "Access Builder orientation report",
   "gate": "G1",
-  "status": "blocked",
-  "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
+  "status": "done",
+  "blocked_on": "",
   "receipt_ref": "t011-wonder-woman-staging-access",
-  "summary": "Run the isolated subscription-backed Claude access-scale builder and publish its sanitized orientation report.",
-  "updated": "2026-09-27T15:13:02Z"
+  "summary": "The isolated subscription-backed Claude access-scale builder completed its bounded orientation and published a sanitized report.",
+  "updated": "2026-09-27T16:22:03Z"
 }

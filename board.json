@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T15:13:03Z",
+  "updated": "2026-09-27T16:22:13Z",
   "gates": [
     {
       "id": "G1",
@@ -140,24 +140,24 @@
       "owner": "jarvis",
       "title": "Retrieval Builder orientation report",
       "gate": "G1",
-      "status": "blocked",
-      "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
+      "status": "done",
+      "blocked_on": "",
       "receipt_ref": "t010-jarvis-staging-access",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/t010-jarvis-staging-access.html",
-      "summary": "Run the isolated subscription-backed Claude retrieval builder and publish its sanitized orientation report.",
-      "updated": "2026-09-27T15:13:01Z"
+      "summary": "The isolated subscription-backed Claude retrieval builder completed its bounded orientation and published a sanitized report.",
+      "updated": "2026-09-27T16:22:02Z"
     },
     {
       "id": "T-011",
       "owner": "wonder-woman",
       "title": "Access Builder orientation report",
       "gate": "G1",
-      "status": "blocked",
-      "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
+      "status": "done",
+      "blocked_on": "",
       "receipt_ref": "t011-wonder-woman-staging-access",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/t011-wonder-woman-staging-access.html",
-      "summary": "Run the isolated subscription-backed Claude access-scale builder and publish its sanitized orientation report.",
-      "updated": "2026-09-27T15:13:02Z"
+      "summary": "The isolated subscription-backed Claude access-scale builder completed its bounded orientation and published a sanitized report.",
+      "updated": "2026-09-27T16:22:03Z"
     },
     {
       "id": "T-012",
@@ -344,76 +344,124 @@
       "owner": "iron-man",
       "title": "Builder inbox and heartbeat activation",
       "gate": "G1",
-      "status": "blocked",
-      "blocked_on": "Subscription-backed Claude builders are live and approval-gated; first orientation reports remain pending.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "agent-inbox-heartbeat-activation",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/agent-inbox-heartbeat-activation.html",
-      "summary": "Activate isolated Claude builder sessions through the loopback-only command center and publish sanitized foreground receipts.",
-      "updated": "2026-09-27T15:13:03Z"
+      "summary": "Eight subscription-backed Claude workers are provisioned and idle; six build gates remain closed pending independent Claude review.",
+      "updated": "2026-09-27T16:22:04Z"
+    },
+    {
+      "id": "T-028",
+      "owner": "iron-man",
+      "title": "G2 dependency graph",
+      "gate": "G2",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "g2-dependency-graph",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/g2-dependency-graph.html",
+      "summary": "Decompose G2 into six bounded packages with explicit dependencies, acceptance tests, and a deferred answerability lane.",
+      "updated": "2026-09-27T16:22:05Z"
+    },
+    {
+      "id": "T-029",
+      "owner": "iron-man",
+      "title": "Worker factory hardening",
+      "gate": "G1",
+      "status": "done",
+      "blocked_on": "",
+      "receipt_ref": "worker-factory-hardening",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/worker-factory-hardening.html",
+      "summary": "Make the sandbox patch durable, raise build turn budgets, and provide verified non-writable dependencies.",
+      "updated": "2026-09-27T16:22:06Z"
+    },
+    {
+      "id": "T-030",
+      "owner": "claude",
+      "title": "Embedding provenance audit",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Audit embedding dimension, finite values, normalization, duplicates, and model provenance without feature changes.",
+      "updated": "2026-09-27T16:22:07Z"
+    },
+    {
+      "id": "T-031",
+      "owner": "claude",
+      "title": "SQLite vector compatibility spike",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Prove extension installation, loading, query, backup, restore, and fallback behavior on sanitized staging.",
+      "updated": "2026-09-27T16:22:08Z"
+    },
+    {
+      "id": "T-032",
+      "owner": "claude",
+      "title": "FTS5 shadow index",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Build a canonical chunk-ID-keyed FTS5 shadow index while preserving the current retrieval path and rollback.",
+      "updated": "2026-09-27T16:22:09Z"
+    },
+    {
+      "id": "T-033",
+      "owner": "claude",
+      "title": "Retrieval evaluation harness",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Awaiting independent Claude G1 review and per-builder GO instruction.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Compare lexical, FTS5, vector, and reciprocal-rank-fusion variants without changing application responses.",
+      "updated": "2026-09-27T16:22:10Z"
+    },
+    {
+      "id": "T-034",
+      "owner": "claude",
+      "title": "G2 retrieval security review",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Depends on T-030, T-031, T-032, and T-033 passing their acceptance tests.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Review tenant scope, citation visibility, malformed embeddings, extension failure, fallback, and rollback.",
+      "updated": "2026-09-27T16:22:11Z"
+    },
+    {
+      "id": "T-035",
+      "owner": "claude",
+      "title": "G2 integration review",
+      "gate": "G2",
+      "status": "blocked",
+      "blocked_on": "Depends on T-030 through T-034 and complete sanitized receipts.",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Verify integration order, ownership boundaries, test coverage, receipt completeness, and rollback safety.",
+      "updated": "2026-09-27T16:22:12Z"
+    },
+    {
+      "id": "T-036",
+      "owner": "claude",
+      "title": "Independent G1 workforce review",
+      "gate": "G1",
+      "status": "in-progress",
+      "blocked_on": "",
+      "receipt_ref": "",
+      "receipt_url": "",
+      "summary": "Review both orientation receipts and issue explicit per-builder GO or NO-GO instructions before any build starts.",
+      "updated": "2026-09-27T16:22:13Z"
     }
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-26T07:21:35Z",
-      "who": "iron-man",
-      "what": "T-015 done: eight approved historical backup artifacts removed"
-    },
-    {
-      "ts": "2026-09-26T07:21:36Z",
-      "who": "iron-man",
-      "what": "T-009 in-progress: preliminary 25-question baseline captured"
-    },
-    {
-      "ts": "2026-09-26T07:31:23Z",
-      "who": "iron-man",
-      "what": "T-009 in-progress: human review packet and scoresheet ready"
-    },
-    {
-      "ts": "2026-09-26T07:31:23Z",
-      "who": "iron-man",
-      "what": "T-019 done: canonical hybrid retrieval design completed"
-    },
-    {
-      "ts": "2026-09-26T07:37:09Z",
-      "who": "iron-man",
-      "what": "T-008 done: full sanitized corpus staging copy verified"
-    },
-    {
-      "ts": "2026-09-26T07:37:09Z",
-      "who": "iron-man",
-      "what": "T-009 blocked: awaiting FFM human scoring and Jarvis verification"
-    },
-    {
-      "ts": "2026-09-26T07:37:09Z",
-      "who": "iron-man",
-      "what": "T-020 done: builder branches and ownership contract published"
-    },
-    {
-      "ts": "2026-09-26T07:37:09Z",
-      "who": "iron-man",
-      "what": "T-021 done: capacity and rate-limit evidence recorded"
-    },
-    {
-      "ts": "2026-09-26T07:37:09Z",
-      "who": "iron-man",
-      "what": "T-022 blocked: sanitized builder access awaits reachable host"
-    },
-    {
-      "ts": "2026-09-26T07:37:09Z",
-      "who": "iron-man",
-      "what": "G1 ready: all gate tasks are done or explicitly blocked"
-    },
-    {
-      "ts": "2026-09-26T07:47:28Z",
-      "who": "iron-man",
-      "what": "T-023 done: Pocket FFM browser interface restored after CSP conflict"
-    },
-    {
-      "ts": "2026-09-26T08:02:11Z",
-      "who": "iron-man",
-      "what": "G1 reopened: new-host delivery and independent builder posts remain blocked"
-    },
     {
       "ts": "2026-09-26T08:02:11Z",
       "who": "iron-man",
@@ -503,6 +551,66 @@
       "ts": "2026-09-27T15:13:03Z",
       "who": "iron-man",
       "what": "T-027 blocked: two approval-gated Claude builders are idle; first reports remain pending"
+    },
+    {
+      "ts": "2026-09-27T16:22:02Z",
+      "who": "iron-man",
+      "what": "T-010 done: Retrieval Builder orientation completed with a sanitized receipt"
+    },
+    {
+      "ts": "2026-09-27T16:22:03Z",
+      "who": "iron-man",
+      "what": "T-011 done: Access Builder orientation completed with a sanitized receipt"
+    },
+    {
+      "ts": "2026-09-27T16:22:04Z",
+      "who": "iron-man",
+      "what": "T-027 in-progress: eight workers are idle and six build gates remain closed"
+    },
+    {
+      "ts": "2026-09-27T16:22:05Z",
+      "who": "iron-man",
+      "what": "T-028 done: G2 decomposed into six dependency-ordered packages"
+    },
+    {
+      "ts": "2026-09-27T16:22:06Z",
+      "who": "iron-man",
+      "what": "T-029 done: worker factory patch, budgets, and dependencies hardened"
+    },
+    {
+      "ts": "2026-09-27T16:22:07Z",
+      "who": "iron-man",
+      "what": "T-030 blocked: embedding provenance audit awaits independent Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:22:08Z",
+      "who": "iron-man",
+      "what": "T-031 blocked: vector compatibility spike awaits independent Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:22:09Z",
+      "who": "iron-man",
+      "what": "T-032 blocked: FTS5 shadow index awaits independent Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:22:10Z",
+      "who": "iron-man",
+      "what": "T-033 blocked: evaluation harness awaits independent Claude GO"
+    },
+    {
+      "ts": "2026-09-27T16:22:11Z",
+      "who": "iron-man",
+      "what": "T-034 blocked: security review depends on T-030 through T-033"
+    },
+    {
+      "ts": "2026-09-27T16:22:12Z",
+      "who": "iron-man",
+      "what": "T-035 blocked: integration review depends on T-030 through T-034"
+    },
+    {
+      "ts": "2026-09-27T16:22:13Z",
+      "who": "iron-man",
+      "what": "T-036 in-progress: independent Claude G1 workforce review queued"
     }
   ]
 }

@@ -47,3 +47,15 @@
 {"ts":"2026-09-27T15:13:01Z","who":"iron-man","what":"T-010 blocked: Retrieval Builder ready; bounded orientation awaits human approval"}
 {"ts":"2026-09-27T15:13:02Z","who":"iron-man","what":"T-011 blocked: Access Builder ready; bounded orientation awaits human approval"}
 {"ts":"2026-09-27T15:13:03Z","who":"iron-man","what":"T-027 blocked: two approval-gated Claude builders are idle; first reports remain pending"}
+{"ts":"2026-09-27T16:22:02Z","who":"iron-man","what":"T-010 done: Retrieval Builder orientation completed with a sanitized receipt"}
+{"ts":"2026-09-27T16:22:03Z","who":"iron-man","what":"T-011 done: Access Builder orientation completed with a sanitized receipt"}
+{"ts":"2026-09-27T16:22:04Z","who":"iron-man","what":"T-027 in-progress: eight workers are idle and six build gates remain closed"}
+{"ts":"2026-09-27T16:22:05Z","who":"iron-man","what":"T-028 done: G2 decomposed into six dependency-ordered packages"}
+{"ts":"2026-09-27T16:22:06Z","who":"iron-man","what":"T-029 done: worker factory patch, budgets, and dependencies hardened"}
+{"ts":"2026-09-27T16:22:07Z","who":"iron-man","what":"T-030 blocked: embedding provenance audit awaits independent Claude GO"}
+{"ts":"2026-09-27T16:22:08Z","who":"iron-man","what":"T-031 blocked: vector compatibility spike awaits independent Claude GO"}
+{"ts":"2026-09-27T16:22:09Z","who":"iron-man","what":"T-032 blocked: FTS5 shadow index awaits independent Claude GO"}
+{"ts":"2026-09-27T16:22:10Z","who":"iron-man","what":"T-033 blocked: evaluation harness awaits independent Claude GO"}
+{"ts":"2026-09-27T16:22:11Z","who":"iron-man","what":"T-034 blocked: security review depends on T-030 through T-033"}
+{"ts":"2026-09-27T16:22:12Z","who":"iron-man","what":"T-035 blocked: integration review depends on T-030 through T-034"}
+{"ts":"2026-09-27T16:22:13Z","who":"iron-man","what":"T-036 in-progress: independent Claude G1 workforce review queued"}

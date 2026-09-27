@@ -1,0 +1,1 @@
+{"id":"T-029","owner":"iron-man","verifier":"jarvis","title":"Worker factory hardening","gate":"G1","status":"done","blocked_on":"","receipt_ref":"worker-factory-hardening","summary":"Make the sandbox patch durable, raise build turn budgets, and provide verified non-writable dependencies.","updated":"2026-09-27T16:22:06Z"}

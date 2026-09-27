@@ -1,0 +1,1 @@
+{"task":"T-034","lane":"g2-security-review","dependencies":["T-030","T-031","T-032","T-033"],"acceptance_tests":["Tenant-scope review passes","Citation-visibility review passes","Malformed-embedding behavior passes","Missing-extension fallback passes","Rollback path is complete","No feature files changed"],"output":"reports/retrieval-security-review.json"}

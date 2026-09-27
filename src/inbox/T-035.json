@@ -1,0 +1,1 @@
+{"task":"T-035","lane":"g2-integration","dependencies":["T-030","T-031","T-032","T-033","T-034"],"acceptance_tests":["Ownership conflicts resolved","Dependency order verified","All required tests and receipts present","Rollback remains one flag change","No merge or deploy performed","GO or NO-GO recommendation written"],"output":"reports/g2-integration-review.json"}

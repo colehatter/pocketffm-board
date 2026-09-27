@@ -4,9 +4,9 @@
   "verifier": "iron-man",
   "title": "Retrieval Builder orientation report",
   "gate": "G1",
-  "status": "blocked",
-  "blocked_on": "Awaiting human approval of the bounded orientation issue and the resulting sanitized report.",
+  "status": "done",
+  "blocked_on": "",
   "receipt_ref": "t010-jarvis-staging-access",
-  "summary": "Run the isolated subscription-backed Claude retrieval builder and publish its sanitized orientation report.",
-  "updated": "2026-09-27T15:13:01Z"
+  "summary": "The isolated subscription-backed Claude retrieval builder completed its bounded orientation and published a sanitized report.",
+  "updated": "2026-09-27T16:22:02Z"
 }

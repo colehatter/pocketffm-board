@@ -1,0 +1,1 @@
+{"id":"T-031","owner":"claude","verifier":"iron-man","title":"SQLite vector compatibility spike","gate":"G2","status":"blocked","blocked_on":"Awaiting independent Claude G1 review and per-builder GO instruction.","receipt_ref":"","summary":"Prove extension installation, loading, query, backup, restore, and fallback behavior on sanitized staging.","updated":"2026-09-27T16:22:08Z"}

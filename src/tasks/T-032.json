@@ -1,0 +1,1 @@
+{"id":"T-032","owner":"claude","verifier":"iron-man","title":"FTS5 shadow index","gate":"G2","status":"blocked","blocked_on":"Awaiting independent Claude G1 review and per-builder GO instruction.","receipt_ref":"","summary":"Build a canonical chunk-ID-keyed FTS5 shadow index while preserving the current retrieval path and rollback.","updated":"2026-09-27T16:22:09Z"}

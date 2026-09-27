@@ -1,0 +1,1 @@
+{"task":"T-030","lane":"g2-embedding-provenance","dependencies":[],"acceptance_tests":["All 26,559 embeddings inspected","Dimension and finite-value counts reported","Normalization distribution reported","Duplicate and provenance evidence reported","No feature files changed","Sanitized receipt written"],"output":"reports/embedding-provenance.json"}

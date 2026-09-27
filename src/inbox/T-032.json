@@ -1,0 +1,1 @@
+{"task":"T-032","lane":"g2-fts-shadow","dependencies":[],"acceptance_tests":["One-to-one canonical chunk IDs preserved","All 26,559 chunks indexed","Tenant scope preserved","Rebuild is deterministic","Current retrieval path remains intact","Focused tests and rollback receipt pass"],"output":"reports/fts-shadow-index.json"}

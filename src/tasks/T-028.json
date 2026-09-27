@@ -1,0 +1,1 @@
+{"id":"T-028","owner":"iron-man","verifier":"jarvis","title":"G2 dependency graph","gate":"G2","status":"done","blocked_on":"","receipt_ref":"g2-dependency-graph","summary":"Decompose G2 into six bounded packages with explicit dependencies, acceptance tests, and a deferred answerability lane.","updated":"2026-09-27T16:22:05Z"}

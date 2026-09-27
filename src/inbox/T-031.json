@@ -1,0 +1,1 @@
+{"task":"T-031","lane":"g2-sqlite-vec-compat","dependencies":[],"acceptance_tests":["Extension installation path documented","Load and query smoke passes","Backup and restore smoke passes","Missing-extension fallback passes","Canonical database remains unchanged","Sanitized receipt written"],"output":"reports/sqlite-vec-compatibility.json"}
