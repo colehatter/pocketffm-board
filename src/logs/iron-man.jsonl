@@ -99,3 +99,9 @@
 {"ts":"2026-09-27T18:44:27Z","who":"iron-man","what":"T-034 done: retrieval security review passed with no blocking issues"}
 {"ts":"2026-09-27T18:44:28Z","who":"iron-man","what":"T-042 in-progress: provider policy and ownership seams cleared; isolated A3 builder started"}
 {"ts":"2026-09-27T18:52:34Z","who":"iron-man","what":"T-035 in-progress: integration reviewer started with T-030 through T-034 receipts and current ownership seams"}
+{"ts":"2026-09-27T19:15:01Z","who":"iron-man","what":"T-040 blocked: open-link registration model recorded; awaits email provider credential and verified sending domain"}
+{"ts":"2026-09-27T19:15:02Z","who":"iron-man","what":"T-041 blocked: QR URL domain is the primary allowed-origin dependency"}
+{"ts":"2026-09-27T19:15:03Z","who":"iron-man","what":"T-043 blocked: two-phase launch profile recorded; awaits T-040 and T-041 before the held load run"}
+{"ts":"2026-09-27T19:15:04Z","who":"iron-man","what":"T-035 done: Phase 1 integration review issued conditional GO with three named safeguards"}
+{"ts":"2026-09-27T19:15:05Z","who":"iron-man","what":"T-042 done: model queue and provider failover passed 18 focused and regression tests"}
+{"ts":"2026-09-27T19:15:06Z","who":"cole","what":"Launch access model approved: distribution-gated registration without a member roster"}

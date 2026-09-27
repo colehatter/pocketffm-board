@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T18:52:34Z",
+  "updated": "2026-09-27T19:15:06Z",
   "gates": [
     {
       "id": "G1",
@@ -440,12 +440,12 @@
       "owner": "claude",
       "title": "G2 integration review",
       "gate": "G2",
-      "status": "in-progress",
+      "status": "done",
       "blocked_on": "",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Reviewing integration order, ownership boundaries, test coverage, receipt completeness, and rollback safety.",
-      "updated": "2026-09-27T18:52:34Z"
+      "receipt_ref": "g2-integration-review",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/g2-integration-review.html",
+      "summary": "The Phase 1 integration review passed with conditional GO for T-037 and three named safeguards.",
+      "updated": "2026-09-27T19:15:04Z"
     },
     {
       "id": "T-036",
@@ -498,14 +498,14 @@
     {
       "id": "T-040",
       "owner": "claude",
-      "title": "A1 membership and login",
+      "title": "A1 registration and passwordless login",
       "gate": "G3",
       "status": "blocked",
-      "blocked_on": "GO recorded; email provider credential and member-list delivery remain Cole dependencies.",
+      "blocked_on": "GO recorded; awaits Cole's email provider credential and verified sending domain.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Implement fail-closed membership, single-use login codes, admin-only import, and the guarded beta-code path.",
-      "updated": "2026-09-27T17:51:34Z"
+      "summary": "Implement open-link email registration, queued single-use verification codes, abuse controls, and the guarded beta-code path without a member allowlist.",
+      "updated": "2026-09-27T19:15:01Z"
     },
     {
       "id": "T-041",
@@ -513,35 +513,35 @@
       "title": "A2 rate limits and CORS",
       "gate": "G3",
       "status": "blocked",
-      "blocked_on": "GO recorded; allowed-origin list remains a Cole dependency.",
+      "blocked_on": "GO recorded; awaits Cole's QR URL domain as the primary allowed origin.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Add separate per-IP and per-member limits, login throttling, Retry-After, and SQLite WAL state.",
-      "updated": "2026-09-27T17:51:35Z"
+      "summary": "Add durable per-IP limits for registration and verification, session limits, Retry-After, and credential-safe CORS for the QR URL domain.",
+      "updated": "2026-09-27T19:15:02Z"
     },
     {
       "id": "T-042",
       "owner": "claude",
       "title": "A3 LLM queue and failover",
       "gate": "G3",
-      "status": "in-progress",
+      "status": "done",
       "blocked_on": "",
-      "receipt_ref": "",
-      "receipt_url": "",
-      "summary": "Building a session-or-IP keyed model queue using the existing application Anthropic key with OpenAI failover while builder Anthropic API billing remains zero.",
-      "updated": "2026-09-27T18:44:28Z"
+      "receipt_ref": "access-a3-llm-queue-failover",
+      "receipt_url": "https://pocketffm-board.vercel.app/receipts/access-a3-llm-queue-failover.html",
+      "summary": "The bounded model queue and controlled provider failover passed 18 focused and regression tests with zero builder Anthropic API billing.",
+      "updated": "2026-09-27T19:15:05Z"
     },
     {
       "id": "T-043",
       "owner": "claude",
-      "title": "A4 access and load harness",
+      "title": "A4 launch and answer load harness",
       "gate": "G3",
       "status": "blocked",
-      "blocked_on": "GO to build, HOLD to run; depends on T-040 through T-042 completing.",
+      "blocked_on": "GO to build, HOLD to run; depends on T-040 and T-041 completing.",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Build an admin-gated harness for p95 at or below 8 seconds, error rate under 1 percent, and zero SQLite busy errors at 1,000 concurrent, with a $50 spend cap.",
-      "updated": "2026-09-27T18:38:15Z"
+      "summary": "Test a 1,000-visitor registration burst followed by steady question traffic, with queued email, 8-second answer p95, under 1 percent errors, and zero SQLite busy errors.",
+      "updated": "2026-09-27T19:15:03Z"
     },
     {
       "id": "T-044",
@@ -556,38 +556,33 @@
       "updated": "2026-09-27T16:50:37Z"
     }
   ],
-  "questions": [],
+  "questions": [
+    {
+      "id": "Q-001",
+      "from": "iron-man",
+      "for": "cole",
+      "text": "Which transactional email provider will Pocket FFM use, and when can its credential be installed privately in the staging secret store?",
+      "status": "open",
+      "answer": ""
+    },
+    {
+      "id": "Q-002",
+      "from": "iron-man",
+      "for": "cole",
+      "text": "Which verified sending domain and From address should deliver login codes, with SPF and DKIM configured?",
+      "status": "open",
+      "answer": ""
+    },
+    {
+      "id": "Q-003",
+      "from": "iron-man",
+      "for": "cole",
+      "text": "What exact QR URL domain should be the primary allowed origin?",
+      "status": "open",
+      "answer": ""
+    }
+  ],
   "log": [
-    {
-      "ts": "2026-09-27T16:50:39Z",
-      "who": "iron-man",
-      "what": "T-031 blocked: GO and sqlite-vec precondition recorded; held by no-build directive"
-    },
-    {
-      "ts": "2026-09-27T16:50:40Z",
-      "who": "iron-man",
-      "what": "T-032 blocked: G1 GO recorded; held by Cole's no-build directive"
-    },
-    {
-      "ts": "2026-09-27T16:50:41Z",
-      "who": "iron-man",
-      "what": "T-033 blocked: GO and lexical-baseline acceptance recorded; held by no-build directive"
-    },
-    {
-      "ts": "2026-09-27T16:50:42Z",
-      "who": "iron-man",
-      "what": "T-036 done: Claude G1 workforce review passed"
-    },
-    {
-      "ts": "2026-09-27T16:50:50Z",
-      "who": "iron-man",
-      "what": "G1 passed: Claude approval recorded through Cole"
-    },
-    {
-      "ts": "2026-09-27T17:12:19Z",
-      "who": "iron-man",
-      "what": "T-038 blocked: semantic-unit artifacts delivered to staging by Cole are required"
-    },
     {
       "ts": "2026-09-27T17:12:20Z",
       "who": "iron-man",
@@ -707,6 +702,36 @@
       "ts": "2026-09-27T18:52:34Z",
       "who": "iron-man",
       "what": "T-035 in-progress: integration reviewer started with T-030 through T-034 receipts and current ownership seams"
+    },
+    {
+      "ts": "2026-09-27T19:15:01Z",
+      "who": "iron-man",
+      "what": "T-040 blocked: open-link registration model recorded; awaits email provider credential and verified sending domain"
+    },
+    {
+      "ts": "2026-09-27T19:15:02Z",
+      "who": "iron-man",
+      "what": "T-041 blocked: QR URL domain is the primary allowed-origin dependency"
+    },
+    {
+      "ts": "2026-09-27T19:15:03Z",
+      "who": "iron-man",
+      "what": "T-043 blocked: two-phase launch profile recorded; awaits T-040 and T-041 before the held load run"
+    },
+    {
+      "ts": "2026-09-27T19:15:04Z",
+      "who": "iron-man",
+      "what": "T-035 done: Phase 1 integration review issued conditional GO with three named safeguards"
+    },
+    {
+      "ts": "2026-09-27T19:15:05Z",
+      "who": "iron-man",
+      "what": "T-042 done: model queue and provider failover passed 18 focused and regression tests"
+    },
+    {
+      "ts": "2026-09-27T19:15:06Z",
+      "who": "cole",
+      "what": "Launch access model approved: distribution-gated registration without a member roster"
     }
   ]
 }
