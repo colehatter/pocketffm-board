@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T18:44:28Z",
+  "updated": "2026-09-27T18:52:34Z",
   "gates": [
     {
       "id": "G1",
@@ -440,12 +440,12 @@
       "owner": "claude",
       "title": "G2 integration review",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "Depends on T-030 through T-034 and complete sanitized receipts.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
-      "summary": "Verify integration order, ownership boundaries, test coverage, receipt completeness, and rollback safety.",
-      "updated": "2026-09-27T16:22:12Z"
+      "summary": "Reviewing integration order, ownership boundaries, test coverage, receipt completeness, and rollback safety.",
+      "updated": "2026-09-27T18:52:34Z"
     },
     {
       "id": "T-036",
@@ -558,11 +558,6 @@
   ],
   "questions": [],
   "log": [
-    {
-      "ts": "2026-09-27T16:50:38Z",
-      "who": "iron-man",
-      "what": "T-030 blocked: G1 GO recorded; held by Cole's no-build directive"
-    },
     {
       "ts": "2026-09-27T16:50:39Z",
       "who": "iron-man",
@@ -707,6 +702,11 @@
       "ts": "2026-09-27T18:44:28Z",
       "who": "iron-man",
       "what": "T-042 in-progress: provider policy and ownership seams cleared; isolated A3 builder started"
+    },
+    {
+      "ts": "2026-09-27T18:52:34Z",
+      "who": "iron-man",
+      "what": "T-035 in-progress: integration reviewer started with T-030 through T-034 receipts and current ownership seams"
     }
   ]
 }
