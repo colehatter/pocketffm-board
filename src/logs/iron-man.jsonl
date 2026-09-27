@@ -94,7 +94,7 @@
 {"ts":"2026-09-27T17:51:42Z","who":"iron-man","what":"Claude A-series and retrieval architecture review recorded with conditional gates"}
 {"ts":"2026-09-27T17:55:23Z","who":"iron-man","what":"T-034 in-progress: retrieval security review started on read-only first-cycle artifacts"}
 {"ts":"2026-09-27T18:38:13Z","who":"cole","what":"Pocket FFM application provider policy approved through October 5; builder Anthropic API billing remains zero"}
-{"ts":"2026-09-27T18:38:14Z","who":"iron-man","what":"T-026 updated: Dan and Mary provider decision and credential swap added to cutover checklist"}
-{"ts":"2026-09-27T18:38:15Z","who":"iron-man","what":"T-043 targets approved: p95 8 seconds, error rate under 1 percent, zero SQLite busy at 1,000 concurrent, $50 cap"}
+{"ts":"2026-09-27T18:38:14Z","who":"iron-man","what":"T-026 done: Dan and Mary provider decision and credential swap added to cutover checklist"}
+{"ts":"2026-09-27T18:38:15Z","who":"iron-man","what":"T-043 blocked: targets approved; awaits T-040 through T-042 completion before the held load run"}
 {"ts":"2026-09-27T18:44:27Z","who":"iron-man","what":"T-034 done: retrieval security review passed with no blocking issues"}
 {"ts":"2026-09-27T18:44:28Z","who":"iron-man","what":"T-042 in-progress: provider policy and ownership seams cleared; isolated A3 builder started"}

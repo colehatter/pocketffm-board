@@ -337,7 +337,7 @@
       "receipt_ref": "cutover-and-rollback-plan",
       "receipt_url": "https://pocketffm-board.vercel.app/receipts/cutover-and-rollback-plan.html",
       "summary": "The October 5 cutover gate includes a Dan and Mary provider decision, credential swap, preflight, rollback triggers, and preservation of the current host.",
-      "updated": "2026-09-27T18:38:13Z"
+      "updated": "2026-09-27T18:38:14Z"
     },
     {
       "id": "T-027",
@@ -691,12 +691,12 @@
     {
       "ts": "2026-09-27T18:38:14Z",
       "who": "iron-man",
-      "what": "T-026 updated: Dan and Mary provider decision and credential swap added to cutover checklist"
+      "what": "T-026 done: Dan and Mary provider decision and credential swap added to cutover checklist"
     },
     {
       "ts": "2026-09-27T18:38:15Z",
       "who": "iron-man",
-      "what": "T-043 targets approved: p95 8 seconds, error rate under 1 percent, zero SQLite busy at 1,000 concurrent, $50 cap"
+      "what": "T-043 blocked: targets approved; awaits T-040 through T-042 completion before the held load run"
     },
     {
       "ts": "2026-09-27T18:44:27Z",
