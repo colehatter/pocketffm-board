@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T19:27:25Z",
+  "updated": "2026-09-29T14:14:00Z",
   "gates": [
     {
       "id": "G1",
@@ -572,12 +572,12 @@
       "owner": "claude",
       "title": "Answerability lite",
       "gate": "G2",
-      "status": "blocked",
-      "blocked_on": "Awaits Dan or Mary approval of the configured no-answer wording through Q-004.",
+      "status": "in-progress",
+      "blocked_on": "",
       "receipt_ref": "",
       "receipt_url": "",
       "summary": "Add legal-guidance refusal, an approved no-answer message, and isolated unanswered-question capture before hybrid retrieval can be enabled in production.",
-      "updated": "2026-09-27T19:27:24Z"
+      "updated": "2026-09-29T14:14:00Z"
     }
   ],
   "questions": [
@@ -610,16 +610,11 @@
       "from": "iron-man",
       "for": "cole",
       "text": "Will Dan or Mary approve the exact no-answer wording, and what should Pocket FFM say when its loaded content cannot support an answer?",
-      "status": "open",
-      "answer": ""
+      "status": "answered",
+      "answer": "Mary approved on 2026-09-29 at 07:14 PDT: I couldn’t find enough support in the FFM library to answer that confidently. Try rephrasing your question, or submit it for the FFM team to review."
     }
   ],
   "log": [
-    {
-      "ts": "2026-09-27T17:51:34Z",
-      "who": "iron-man",
-      "what": "T-040 blocked: GO recorded; awaits Cole email credential and member list"
-    },
     {
       "ts": "2026-09-27T17:51:35Z",
       "who": "iron-man",
@@ -764,6 +759,11 @@
       "ts": "2026-09-27T19:27:25Z",
       "who": "cole",
       "what": "T-037 GO accepted with degradation, quality, latency, unchanged answerability, and T-046 production gates"
+    },
+    {
+      "ts": "2026-09-29T14:14:00Z",
+      "who": "iron-man",
+      "what": "T-046 in-progress: Mary approved the configured no-answer wording; engineering package authorized by Cole"
     }
   ]
 }
